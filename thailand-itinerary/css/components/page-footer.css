@@ -1,0 +1,21 @@
+/* === Page Footer Component === */
+/* Full-width dark brown footer bar with centered brand text */
+
+.page-footer {
+  background-color: var(--color-footer-bg);
+  padding: var(--spacing-sm) 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+.page-footer__text {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-footer-text);
+  text-transform: uppercase;
+  letter-spacing: var(--footer-letter-spacing);
+  line-height: var(--line-height-snug);
+  margin-bottom: 0;
+  text-align: center;
+}

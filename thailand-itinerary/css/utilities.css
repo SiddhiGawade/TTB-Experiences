@@ -1,0 +1,49 @@
+/* === Utility Classes === */
+
+/* Screen Reader Only — visually hidden but accessible to assistive tech */
+.u-sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Skip Link — visually hidden until focused */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: var(--z-skip-link);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 8px 16px;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid var(--color-footer-text);
+  outline-offset: 2px;
+}
+
+/* Focus Ring Utility */
+.u-focus-ring:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Clearfix */
+.u-clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}

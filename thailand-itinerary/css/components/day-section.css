@@ -1,0 +1,99 @@
+/* === Day Section Component === */
+/* Two-column layout for day itinerary content: text + image */
+
+.day-heading {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-primary);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-xl);
+}
+
+.day-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--column-gap);
+  align-items: start;
+  margin-bottom: var(--spacing-3xl);
+}
+
+.day-section--text-left .day-section__text {
+  order: 1;
+}
+
+.day-section--text-left .day-section__image {
+  order: 2;
+}
+
+.day-section--image-left .day-section__image {
+  order: 1;
+}
+
+.day-section--image-left .day-section__text {
+  order: 2;
+}
+
+.day-section__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.day-section__title {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-normal);
+  margin-bottom: var(--spacing-md);
+}
+
+.day-section__body {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-body);
+  line-height: var(--line-height-relaxed);
+  text-align: justify;
+  margin-bottom: var(--spacing-md);
+}
+
+.day-section__body:last-of-type {
+  margin-bottom: var(--spacing-md);
+}
+
+.day-section__callout {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  font-style: italic;
+  color: var(--color-text-primary);
+  line-height: var(--line-height-relaxed);
+  margin-top: var(--spacing-xs);
+  margin-bottom: 0;
+}
+
+.day-section__image {
+  overflow: hidden;
+}
+
+.day-section__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-normal), opacity var(--transition-normal);
+}
+
+.day-section__img:hover {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+
+/* Day 01 specific: image is shorter/landscape */
+.day-section--text-left .day-section__img {
+  aspect-ratio: 4 / 3;
+}
+
+/* Day 02 specific: image is taller/portrait */
+.day-section--image-left .day-section__img {
+  aspect-ratio: 3 / 4;
+}

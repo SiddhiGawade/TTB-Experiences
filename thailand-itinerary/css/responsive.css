@@ -1,0 +1,156 @@
+/* === Responsive Styles === */
+/* Media queries for all breakpoints per UX Specification */
+
+/* ---- xs: Mobile (< 576px) ---- */
+@media (max-width: 575.98px) {
+  :root {
+    --page-padding: var(--page-padding-mobile);
+  }
+
+  .page__wrapper {
+    padding: var(--spacing-lg) var(--page-padding-mobile);
+  }
+
+  .day-heading {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .day-section {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .day-section--text-left .day-section__text,
+  .day-section--text-left .day-section__image,
+  .day-section--image-left .day-section__text,
+  .day-section--image-left .day-section__image {
+    order: unset;
+  }
+
+  .day-section--image-left .day-section__text {
+    order: 1;
+  }
+
+  .day-section--image-left .day-section__image {
+    order: 2;
+  }
+
+  .day-section__img {
+    aspect-ratio: 16 / 10 !important;
+  }
+
+  .logo-badge {
+    width: var(--logo-size-mobile);
+    height: var(--logo-size-mobile);
+    top: -5px;
+    right: -5px;
+  }
+
+  .logo-badge__icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .logo-badge__name {
+    font-size: var(--font-size-sm);
+  }
+
+  .logo-badge__tagline {
+    font-size: 5px;
+  }
+
+  .page-footer__text {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+}
+
+/* ---- sm: Tablet (576px – 768px) ---- */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .page__wrapper {
+    padding: var(--spacing-xl) 25px;
+  }
+
+  .day-heading {
+    font-size: 2.25rem;
+  }
+
+  .day-section {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .day-section--text-left .day-section__text,
+  .day-section--text-left .day-section__image,
+  .day-section--image-left .day-section__text,
+  .day-section--image-left .day-section__image {
+    order: unset;
+  }
+
+  .day-section--image-left .day-section__text {
+    order: 1;
+  }
+
+  .day-section--image-left .day-section__image {
+    order: 2;
+  }
+
+  .logo-badge {
+    width: 65px;
+    height: 65px;
+  }
+
+  .logo-badge__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .logo-badge__name {
+    font-size: 12px;
+  }
+
+  .logo-badge__tagline {
+    font-size: 6px;
+  }
+}
+
+/* ---- md: Tablet Landscape (768px – 992px) ---- */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .page__wrapper {
+    padding: var(--spacing-2xl) var(--spacing-2xl);
+  }
+
+  .day-heading {
+    font-size: var(--font-size-2xl);
+  }
+
+  .day-section {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .logo-badge {
+    width: var(--logo-size-tablet);
+    height: var(--logo-size-tablet);
+  }
+
+  .logo-badge__icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* ---- lg: Desktop (992px – 1200px) ---- */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .day-section {
+    grid-template-columns: 55fr 45fr;
+  }
+}
+
+/* ---- xl: Wide Desktop (> 1200px) ---- */
+@media (min-width: 1200px) {
+  .day-section {
+    grid-template-columns: 55fr 45fr;
+  }
+}

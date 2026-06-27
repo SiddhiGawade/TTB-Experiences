@@ -1,0 +1,90 @@
+/* === Design Tokens === */
+/* All CSS custom properties defined per Architecture Document */
+
+:root {
+  /* === Colors === */
+  --color-primary: #6B3A2A;
+  --color-secondary: #5C3324;
+  --color-accent: #8B5E3C;
+  --color-background: #FFFFFF;
+  --color-background-alt: #FAF8F5;
+  --color-text-primary: #4A2C1A;
+  --color-text-body: #5C3D2E;
+  --color-border: #6B3A2A;
+  --color-footer-bg: #4A2C1A;
+  --color-footer-text: #D4A96A;
+  --color-footer-text-hover: #E8C48A;
+  --color-white: #FFFFFF;
+
+  /* === Typography === */
+  --font-family-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-family-body: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+  --font-family-logo: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+
+  --font-size-xs: 0.5rem;      /* 8px */
+  --font-size-sm: 0.75rem;     /* 12px */
+  --font-size-base: 0.875rem;  /* 14px */
+  --font-size-md: 1rem;        /* 16px */
+  --font-size-lg: 1.25rem;     /* 20px */
+  --font-size-xl: 2rem;        /* 32px */
+  --font-size-2xl: 2.5rem;     /* 40px */
+  --font-size-3xl: 3rem;       /* 48px */
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.1;
+  --line-height-snug: 1.3;
+  --line-height-normal: 1.4;
+  --line-height-relaxed: 1.6;
+
+  /* === Spacing === */
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+  --spacing-xl: 25px;
+  --spacing-2xl: 30px;
+  --spacing-3xl: 40px;
+
+  /* === Layout === */
+  --page-max-width: 720px;
+  --page-padding: 40px;
+  --page-padding-mobile: 20px;
+  --column-gap: 30px;
+
+  /* === Borders === */
+  --border-rule: 2px solid var(--color-border);
+  --border-logo: 3px solid var(--color-primary);
+
+  /* === Radii === */
+  --radius-none: 0;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-full: 50%;
+
+  /* === Shadows === */
+  --shadow-none: none;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  /* === Transitions === */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  /* === Z-Index === */
+  --z-base: 1;
+  --z-header: 10;
+  --z-logo: 20;
+  --z-skip-link: 100;
+
+  /* === Logo === */
+  --logo-size: 80px;
+  --logo-size-tablet: 70px;
+  --logo-size-mobile: 60px;
+
+  /* === Footer === */
+  --footer-height: 40px;
+  --footer-letter-spacing: 3px;
+}
