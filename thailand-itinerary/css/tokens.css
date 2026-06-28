@@ -17,8 +17,8 @@
   --color-white: #FFFFFF;
 
   /* === Typography === */
-  --font-family-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
-  --font-family-body: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+  --font-family-heading: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+  --font-family-body: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --font-family-logo: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
 
   --font-size-xs: 0.5rem;      /* 8px */

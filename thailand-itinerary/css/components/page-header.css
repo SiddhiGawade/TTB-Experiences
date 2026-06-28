@@ -21,4 +21,5 @@
   border: none;
   border-top: var(--border-rule);
   margin-bottom: var(--spacing-2xl);
+  margin-right: 100px;
 }
