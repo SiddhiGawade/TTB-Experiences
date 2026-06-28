@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thailand Itinerary | PDF Viewer</title>
+  
+  <!-- Reuse existing stylesheets -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components/page-header.css">
+  <link rel="stylesheet" href="css/components/logo-badge.css">
+  <link rel="stylesheet" href="css/components/day-section.css">
+  <link rel="stylesheet" href="css/components/page-footer.css">
+  
+  <style>
+    /* PDF Viewer Specific Styles */
+    body.pdf-viewer {
+      background-color: #525659; /* Standard PDF viewer dark background */
+      padding: 40px 0;
+    }
+    
+    .pdf-viewer #viewer-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+    
+    .pdf-viewer .page__wrapper {
+      /* Override the flexible wrapper from layout.css to enforce fixed A4 sizing */
+      width: 100%;
+      max-width: 800px;
+      height: 1131px;
+      margin: 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+      background-color: var(--color-background);
+    }
+  </style>
+
+  <script src="js/viewer.js" defer></script>
+</head>
+<body class="pdf-viewer">
+  <div id="viewer-container">
+    <p style="color: white; font-family: sans-serif;">Loading multi-page viewer...</p>
+  </div>
+</body>
+</html>

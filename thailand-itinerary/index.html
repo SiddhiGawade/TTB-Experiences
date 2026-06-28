@@ -4,15 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Thailand Itinerary Day 01 & 02 — Arrive at Chiang Mai, hotel transfer, welcome dinner, and guided city temple tour featuring Wat Phra Singh, Wat Chedi Luang, and more. By TTB Experiences.">
-  <title>Thailand Itinerary — Day 01 & 02 | TTB Experiences</title>
+  <meta name="description" id="meta-description" content="Thailand Itinerary">
+  <title id="meta-title">Thailand Itinerary | Loading...</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:wght@400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Vesper+Libre:wght@400;500;700;900&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;700&display=swap"
     rel="stylesheet">
 
   <!-- Stylesheets (load order per Architecture Doc) -->
@@ -29,6 +28,7 @@
 
   <!-- JavaScript -->
   <script src="js/main.js" defer></script>
+  <script src="js/data-loader.js" defer></script>
 </head>
 
 <body class="page">
@@ -40,7 +40,7 @@
 
     <!-- ===== HEADER ===== -->
     <header class="page-header">
-      <p class="page-header__title">Thailand Itinerary</p>
+      <p class="page-header__title" id="page-header-title"></p>
       <div class="page-header__divider"></div>
 
       <!-- TTB Logo Badge -->
@@ -54,50 +54,33 @@
     <main id="main-content" class="page__content">
 
       <!-- Main Day Heading -->
-      <h1 class="day-heading">Day 01 &amp; 02</h1>
+      <h1 class="day-heading" id="main-heading"></h1>
 
-      <!-- ===== DAY 01 SECTION ===== -->
-      <section class="day-section day-section--text-left" aria-labelledby="day01-heading">
-        <div class="day-section__text">
-          <h2 id="day01-heading" class="day-section__title">Day 01: Arrive at Chiang Mai &amp; Drop to Hotel</h2>
-          <p class="day-section__body">Upon your arrival at Chiang Mai International Airport, our representative will
-            warmly welcome you with a meet-and-greet service. You will then be transferred to your hotel for check-in
-            and some time to relax. In the evening, enjoy a delightful welcome dinner by the riverside at The Gallery
-            Restaurant, offering the perfect introduction to the charm of Chiang Mai.</p>
-          <p class="day-section__callout">Overnight stay in Chiang Mai.</p>
-        </div>
-        <div class="day-section__image">
-          <img class="day-section__img" src="assets/images/chiang-mai-temple.png"
-            alt="Chiang Mai temple illuminated at night with warm golden lights" loading="eager" width="600"
-            height="450">
-        </div>
-      </section>
+      <!-- Container for dynamic days -->
+      <div id="days-container"></div>
 
-      <!-- ===== DAY 02 SECTION ===== -->
-      <section class="day-section day-section--image-left" aria-labelledby="day02-heading">
-        <div class="day-section__image">
-          <img class="day-section__img" src="assets/images/royal-flora-garden.png"
-            alt="Royal Flora Ratchaphruek garden pavilion with manicured flower beds in Chiang Mai" loading="lazy"
-            width="450" height="600">
-        </div>
-        <div class="day-section__text">
-          <h2 id="day02-heading" class="day-section__title">Day 2: City Temple Tour of Chiang Mai</h2>
-          <p class="day-section__body">Start your day with a delicious buffet breakfast at the hotel before setting out
-            on a guided city tour of Chiang Mai.</p>
-          <p class="day-section__body">Drive through the city's vibrant markets, charming residential neighborhoods, and
-            bustling main streets while discovering its rich cultural heritage.</p>
-          <p class="day-section__body">Visit some of Chiang Mai's most iconic temples, including Wat Phra Singh, Wat
-            Chedi Luang, Wat Chiang Man, and Wat Suan Dok. After the tour, return to your hotel and enjoy the rest of
-            the evening at leisure.</p>
-          <p class="day-section__callout">Overnight stay in Chiang Mai.</p>
-        </div>
-      </section>
+      <!-- ===== DAY TEMPLATE ===== -->
+      <template id="day-template">
+        <section class="day-section" aria-labelledby="">
+          
+          <div class="day-section__image">
+            <img class="day-section__img" src="" alt="" loading="lazy" width="" height="">
+          </div>
+
+          <div class="day-section__text">
+            <h2 class="day-section__title"></h2>
+            <div class="day-section__paragraphs"></div>
+            <p class="day-section__callout"></p>
+          </div>
+
+        </section>
+      </template>
 
     </main>
 
     <!-- ===== FOOTER ===== -->
     <footer class="page-footer">
-      <p class="page-footer__text">TTB Experiences</p>
+      <p class="page-footer__text" id="page-footer-text"></p>
     </footer>
 
   </div>

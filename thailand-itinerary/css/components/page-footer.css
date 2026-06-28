@@ -5,7 +5,7 @@
   background-color: var(--color-footer-bg);
   padding: var(--spacing-sm) 0;
   text-align: center;
-  margin-top: auto;
+  margin-top: 0;
 }
 
 .page-footer__text {

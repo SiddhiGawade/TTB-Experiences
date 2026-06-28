@@ -1,12 +1,6 @@
 /* === Layout === */
 /* Page wrapper, grid structure, containers, section spacing */
 
-.page {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
 .page__wrapper {
   width: 100%;
   max-width: var(--page-max-width);
@@ -14,12 +8,9 @@
   padding: var(--spacing-2xl) var(--page-padding);
   background-color: var(--color-background);
   position: relative;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
 }
 
 .page__content {
-  flex: 1;
   padding-bottom: var(--spacing-3xl);
 }
+

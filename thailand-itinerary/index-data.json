@@ -1,0 +1,197 @@
+{
+  "pages": [
+    {
+      "pageId": "page-1",
+      "meta": {
+        "title": "Thailand Itinerary — Day 01 & 02 | TTB Experiences",
+        "description": "Thailand Itinerary Day 01 & 02 — Arrive at Chiang Mai, hotel transfer, welcome dinner, and guided city temple tour featuring Wat Phra Singh, Wat Chedi Luang, and more. By TTB Experiences."
+      },
+      "header": {
+        "title": "Thailand Itinerary"
+      },
+      "mainHeading": "Day 01 & 02",
+      "days": [
+        {
+          "id": "day01-heading",
+          "title": "Day 01: Arrive at Chiang Mai & Drop to Hotel",
+          "paragraphs": [
+            "Upon your arrival at Chiang Mai International Airport, our representative will warmly welcome you with a meet-and-greet service. You will then be transferred to your hotel for check-in and some time to relax. In the evening, enjoy a delightful welcome dinner by the riverside at The Gallery Restaurant, offering the perfect introduction to the charm of Chiang Mai."
+          ],
+          "callout": "Overnight stay in Chiang Mai.",
+          "image": {
+            "src": "assets/images/chiang-mai-temple.png",
+            "alt": "Chiang Mai temple illuminated at night with warm golden lights",
+            "width": 600,
+            "height": 450,
+            "loading": "eager"
+          },
+          "layout": "text-left"
+        },
+        {
+          "id": "day02-heading",
+          "title": "Day 2: City Temple Tour of Chiang Mai",
+          "paragraphs": [
+            "Start your day with a delicious buffet breakfast at the hotel before setting out on a guided city tour of Chiang Mai.",
+            "Drive through the city's vibrant markets, charming residential neighborhoods, and bustling main streets while discovering its rich cultural heritage.",
+            "Visit some of Chiang Mai's most iconic temples, including Wat Phra Singh, Wat Chedi Luang, Wat Chiang Man, and Wat Suan Dok. After the tour, return to your hotel and enjoy the rest of the evening at leisure."
+          ],
+          "callout": "Overnight stay in Chiang Mai.",
+          "image": {
+            "src": "assets/images/royal-flora-garden.png",
+            "alt": "Royal Flora Ratchaphruek garden pavilion with manicured flower beds in Chiang Mai",
+            "width": 450,
+            "height": 600,
+            "loading": "lazy"
+          },
+          "layout": "image-left"
+        }
+      ],
+      "footer": {
+        "text": "TTB Experiences"
+      }
+    },
+    {
+      "pageId": "page-2",
+      "meta": {
+        "title": "Thailand Itinerary — Day 03 & 04 | TTB Experiences",
+        "description": "Thailand Itinerary Day 03 & 04 — Visit Doi Suthep Temple, explore San Kamphaeng silk weaving, Bo Sang umbrella village, and embark on a full-day excursion to Doi Inthanon National Park with Karen Hill Tribe visit."
+      },
+      "header": {
+        "title": "Thailand Itinerary"
+      },
+      "mainHeading": "Day 03 & 04",
+      "days": [
+        {
+          "id": "day03-heading",
+          "title": "Day 3: Doi Suthep Temple",
+          "paragraphs": [
+            "Enjoy a buffet breakfast at the hotel before setting out to explore the cultural and artistic treasures of Chiang Mai. Begin with a visit to the iconic Wat Phra That Doi Suthep, a magnificent 600-year-old temple perched atop Doi Suthep Mountain. Ascend the famous 306-step Naga staircase to admire the stunning copper-plated chedi, crowned with a five-tiered golden umbrella and believed to house sacred relics of Lord Buddha. On a clear day, the temple offers breathtaking panoramic views of Chiang Mai city.",
+            "Later, continue to the San Kamphaeng district, renowned for its traditional silk and cotton weaving industries, where you can witness the intricate craftsmanship behind these exquisite fabrics. Visit the charming village of Bo Sang, famous for its beautifully handcrafted and hand-painted Thai paper umbrellas, before proceeding to Thai Celadon to discover the art of producing elegant celadon ceramics inspired by the historic Sawankhalok pottery of Sukhothai. Conclude the day with visits to local workshops showcasing the fine craftsmanship of traditional lacquerware and silverware, offering a fascinating glimpse into Northern Thailand's rich artisanal heritage."
+          ],
+          "callout": "Overnight stay in Chiang Mai.",
+          "image": {
+            "src": "assets/images/doi-suthep-temple.png",
+            "alt": "Aerial view of Wat Phra That Doi Suthep golden pagoda surrounded by lush green mountains in Chiang Mai",
+            "width": 600,
+            "height": 450,
+            "loading": "lazy"
+          },
+          "layout": "text-left"
+        },
+        {
+          "id": "day04-heading",
+          "title": "Day 4: Doi Inthanon National Park + White Karen Hill Tribe (L)",
+          "paragraphs": [
+            "Begin your day with a hearty buffet breakfast at the hotel before embarking on a full-day excursion to Doi Inthanon National Park, located approximately 58 km from Chiang Mai. Home to Thailand's highest peak at 2,565 meters, the park is renowned for its breathtaking mountain landscapes, lush evergreen forests, vibrant rhododendron groves, and rich biodiversity, making it a paradise for nature lovers and birdwatchers.",
+            "Along the scenic drive, visit traditional Karen hill tribe villages, the picturesque Wachiratharn Waterfall, and the iconic Twin Chedis built by the Royal Thai Air Force in honor of King Bhumibol Adulyadej and Queen Sirikit. Continue to the summit, where the shrine of Chao Inthawichayanon, the last ruler of Chiang Mai, is located. Enjoy a delicious local lunch during the tour before returning to your hotel."
+          ],
+          "callout": "Overnight stay in Chiang Mai.",
+          "image": {
+            "src": "assets/images/doi-suthep-temple.png",
+            "alt": "Aerial view of Wat Phra That Doi Suthep golden pagoda surrounded by lush green mountains in Chiang Mai",
+            "width": 600,
+            "height": 450,
+            "loading": "lazy"
+          },
+          "layout": "image-left"
+        }
+      ],
+      "footer": {
+        "text": "TTB Experiences"
+      }
+    },
+    {
+      "pageId": "page-3",
+      "meta": {
+        "title": "Thailand Itinerary — Day 05 & 06 | TTB Experiences",
+        "description": "Thailand Itinerary Day 05 & 06 — Explore Chiang Rai, visit the White Temple (Wat Rong Khun), Blue Temple (Wat Rong Suea Ten), Baan Dam, Choui Fong Tea Plantation, and the Golden Triangle."
+      },
+      "header": {
+        "title": "Thailand Itinerary"
+      },
+      "mainHeading": "Day 05 & 06",
+      "days": [
+        {
+          "id": "day05-heading",
+          "title": "Day 5: Chiang Mai – Chiang Rai. Visit Wat Rong Sua Ten (Blue Temple) (Lunch) & Chiang Rai Foodie & Night Market Tour With Rickshaw. (L)",
+          "paragraphs": [
+            "Enjoy a buffet breakfast at the hotel before checking out and departing for Chiang Rai. En route, visit the magnificent Wat Rong Khun, popularly known as the White Temple, renowned for its striking architecture and intricate contemporary design. Continue to the vibrant Wat Rong Suea Ten, also known as the Blue Temple, famous for its stunning sapphire-blue interiors and unique artistic beauty.",
+            "After enjoying a delicious lunch at a local restaurant, proceed to your hotel in Chiang Rai for check-in and some time to relax.",
+            "In the evening, experience the flavors and culture of Chiang Rai on a guided foodie and night market tour. Stroll through the lively local markets while sampling authentic Northern Thai delicacies, including Sai Ua (Northern Thai sausage), Khao Soi, noodles, grilled barbecue skewers, fried vegetables, and traditional desserts.",
+            "Later, enjoy a charming trishaw (rickshaw) ride to the iconic Clock Tower, where you can witness its spectacular evening light show. Conclude the day by exploring Chiang Rai's colorful night markets, the perfect place to shop for unique local handicrafts and souvenirs before returning to your hotel."
+          ],
+          "callout": "Overnight stay in Chiang Rai.",
+          "image": null,
+          "layout": "text-left"
+        },
+        {
+          "id": "day06-heading",
+          "title": "Day 6: Chiang Rai – Chiang Rai – Baan Dam - Chui Fong Golden Triangle (L)",
+          "paragraphs": [
+            "Start your day with a buffet breakfast at the hotel before setting out to explore some of Chiang Rai's most fascinating attractions. Begin with a visit to the unique Baan Dam (Black House), an extraordinary estate created by Thailand's National Artist, Thawan Duchanee. Wander through its striking collection of black wooden buildings adorned with intricate wood carvings, animal skins, horns, and thought-provoking art installations.",
+            "Continue to the picturesque Choui Fong Tea Plantation, where you can admire the lush tea fields and, if you wish, enjoy a refreshing iced tea and tea cake at your own expense.",
+            "Savor a delicious lunch at a local restaurant before heading to the famous Golden Triangle, where the borders of Thailand, Myanmar, and Laos converge.",
+            "Later, embark on a traditional boat ride along the majestic Mekong River, taking in the scenic beauty of this historic region. After the cruise, return to your hotel and relax for the evening."
+          ],
+          "callout": "Overnight stay in Chiang Rai.",
+          "image": null,
+          "layout": "image-left"
+        }
+      ],
+      "footer": {
+        "text": "TTB Experiences"
+      }
+    },
+    {
+      "pageId": "page-4",
+      "meta": {
+        "title": "Thailand Itinerary — Day 07 & 08 | TTB Experiences",
+        "description": "Thailand Itinerary Day 07 & 08 — Enjoy an authentic Khantoke Dinner in Chiang Mai and transfer to the airport for your onward journey."
+      },
+      "header": {
+        "title": "Thailand Itinerary"
+      },
+      "mainHeading": "Day 07 & 08",
+      "days": [
+        {
+          "id": "day07-heading",
+          "title": "Day 7: Chiang Rai – Chiang Mai Eve Khantoke Dinner (D)",
+          "paragraphs": [
+            "Enjoy a buffet breakfast at the hotel before checking out and departing from Chiang Rai at 8:00 AM.",
+            "Travel back to Chiang Mai on a scenic drive of approximately three hours via the Waing Pa Pao district, arriving in the city by the late afternoon.",
+            "After checking in and taking some time to relax, spend the evening enjoying an authentic Khantoke Dinner, a traditional Northern Thai dining experience.",
+            "Savor a variety of regional delicacies served on large platters at low tables while seated on floor mats, accompanied by captivating folk dances and cultural performances that showcase the rich heritage of Northern Thailand."
+          ],
+          "callout": "Overnight stay in Chiang Mai.",
+          "image": {
+            "src": "assets/images/day_7.png",
+            "alt": "Scenic landscape view of a river, mountains, and town",
+            "width": 450,
+            "height": 600,
+            "loading": "lazy"
+          },
+          "layout": "text-left"
+        },
+        {
+          "id": "day08-heading",
+          "title": "Day 8: Transfer to the Airport",
+          "paragraphs": [
+            "Enjoy a buffet breakfast at the hotel before checking out. At the scheduled time, you will be transferred to Chiang Mai International Airport for your onward journey, carrying with you wonderful memories of your unforgettable Thailand holiday."
+          ],
+          "callout": "",
+          "image": {
+            "src": "assets/images/day_8.png",
+            "alt": "Khantoke dinner traditional Northern Thai food platter",
+            "width": 450,
+            "height": 600,
+            "loading": "lazy"
+          },
+          "layout": "image-left"
+        }
+      ],
+      "footer": {
+        "text": "TTB Experiences"
+      }
+    }
+  ]
+}
