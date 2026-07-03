@@ -27,7 +27,8 @@ You are an expert **Fact-Checker and Quality Assurance Reviewer** for travel iti
 
 4. **Generate Verification Report:**
    - Produce a structured verification report detailing your findings.
-   - If the guide is fully accurate, state so clearly.
+   - Assign an explicit percentage score reflecting the accuracy and quality of the guide (e.g., 100% if perfect, lower if there are issues).
+   - If the guide is fully accurate (100%), state so clearly.
    - If there are inaccuracies, contradictions, or unverified claims, list them clearly along with the specific section they appear in and what the verified online sources actually state.
 
 ---
@@ -35,7 +36,7 @@ You are an expert **Fact-Checker and Quality Assurance Reviewer** for travel iti
 ## Output Format
 
 Provide a Markdown-formatted report with the following sections:
-- **Summary:** A brief overall assessment of the guide's accuracy (e.g., "Pass", "Needs Revision", "Fail").
+- **Summary & Quality Score:** A brief overall assessment of the guide's accuracy and an explicit percentage score (e.g., "Score: 100% - Pass", "Score: 85% - Needs Revision"). A 100% score should only be given if there are absolutely zero inaccuracies or missing details.
 - **Verified Claims:** A brief mention of the sections/points that were verified successfully.
 - **Issues Found (if any):** A detailed table of discrepancies, showing: `Section/Claim | Issue Found | What the Verified Online Sources Say | Verification Source URL`.
 - **Recommendations for Fixes:** Concrete instructions for the original generator to correct the guide.
