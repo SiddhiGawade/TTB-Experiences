@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Recommendation Guide: Phuket | Editorial Edition</title>
+  <meta name="description" content="A comprehensive, editorial travel guide for Phuket in October. Fact-checked itinerary covering weather, activities, dining, shopping, and essential logistics.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ==========================================
+       1. DESIGN TOKENS & CSS VARIABLES
+       ========================================== */
+    :root {
+      /* Phuket Sunburst (Light Theme) */
+      --bg-canvas: #F8FAFC;
+      --surface-card: #FFFFFF;
+      --surface-subtle: #F1F5F9;
+      --surface-glass: rgba(255, 255, 255, 0.85);
+      --border-subtle: #E2E8F0;
+      --border-accent: #0284C7;
+      --text-primary: #0F172A;
+      --text-secondary: #475569;
+      --text-muted: #64748B;
+      --accent-primary: #0EA5E9;
+      --accent-teal: #0D9488;
+      --accent-amber: #D97706;
+      
+      --alert-danger-bg: #FEF2F2;
+      --alert-danger-border: #FCA5A5;
+      --alert-danger-text: #991B1B;
+      
+      --alert-medical-bg: #F0FDF4;
+      --alert-medical-border: #86EFAC;
+      --alert-medical-text: #166534;
+      
+      --shadow-elevation-1: 0 4px 20px rgba(0, 0, 0, 0.05);
+      --shadow-elevation-2: 0 10px 30px rgba(0, 0, 0, 0.08);
+      
+      /* Typography */
+      --font-primary: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+      --font-display: 'Outfit', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      
+      /* Spatial Scale */
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-6: 24px;
+      --space-8: 32px;
+      --space-12: 48px;
+      --space-16: 64px;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+      
+      --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-base: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-smooth: 350ms ease;
+    }
+
+    [data-theme="dark"] {
+      /* Andaman Twilight (Dark Theme) */
+      --bg-canvas: #090D16;
+      --surface-card: #111827;
+      --surface-subtle: #1F2937;
+      --surface-glass: rgba(17, 24, 39, 0.85);
+      --border-subtle: #1F2937;
+      --border-accent: #38BDF8;
+      --text-primary: #F8FAFC;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --accent-primary: #38BDF8;
+      --accent-teal: #2DD4BF;
+      --accent-amber: #FBBF24;
+      
+      --alert-danger-bg: #450A0A;
+      --alert-danger-border: #991B1B;
+      --alert-danger-text: #FCA5A5;
+      
+      --alert-medical-bg: #052E16;
+      --alert-medical-border: #166534;
+      --alert-medical-text: #86EFAC;
+      
+      --shadow-elevation-1: 0 8px 30px rgba(0, 0, 0, 0.40);
+      --shadow-elevation-2: 0 12px 40px rgba(0, 0, 0, 0.60);
+    }
+
+    /* ==========================================
+       2. BASE & RESET STYLES
+       ========================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      font-family: var(--font-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+      transition: background-color var(--transition-smooth), color var(--transition-smooth);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    /* Layout Containers */
+    .container {
+      width: 100%;
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 var(--space-4);
+    }
+
+    @media (min-width: 640px) {
+      .container { padding: 0 var(--space-6); }
+    }
+    @media (min-width: 1024px) {
+      .container { padding: 0 var(--space-8); }
+    }
+
+    /* Typography Utilities */
+    .display-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.25rem, 4vw + 1rem, 3.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+      background: linear-gradient(135deg, var(--text-primary) 30%, var(--accent-primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 2vw + 1rem, 2.25rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-2);
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+
+    .section-number {
+      font-family: var(--font-mono);
+      font-size: 0.85em;
+      color: var(--accent-primary);
+      background: var(--surface-subtle);
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .section-subtitle {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      margin-bottom: var(--space-8);
+    }
+
+    /* ==========================================
+       3. HEADER & STICKY NAVIGATION
+       ========================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--surface-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: background-color var(--transition-smooth), border-color var(--transition-smooth);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      gap: var(--space-4);
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-logo svg {
+      width: 28px;
+      height: 28px;
+      color: var(--accent-primary);
+    }
+
+    .brand-badge {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 3px 8px;
+      border-radius: var(--radius-full);
+      background: rgba(14, 165, 233, 0.12);
+      color: var(--accent-primary);
+      border: 1px solid rgba(14, 165, 233, 0.25);
+    }
+
+    .nav-scrollspy {
+      display: none;
+      align-items: center;
+      gap: var(--space-1);
+      background: var(--surface-subtle);
+      padding: 4px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-subtle);
+    }
+
+    @media (min-width: 1024px) {
+      .nav-scrollspy { display: flex; }
+    }
+
+    .nav-link {
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      color: var(--text-secondary);
+      transition: all var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .nav-link:hover {
+      color: var(--text-primary);
+    }
+
+    .nav-link.active {
+      background-color: var(--surface-card);
+      color: var(--accent-primary);
+      box-shadow: var(--shadow-elevation-1);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+
+    .theme-toggle-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-full);
+      background-color: var(--surface-subtle);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      transition: all var(--transition-base);
+    }
+
+    .theme-toggle-btn:hover {
+      border-color: var(--border-accent);
+      transform: scale(1.05);
+    }
+
+    .theme-toggle-btn svg {
+      width: 20px;
+      height: 20px;
+      transition: transform 350ms ease;
+    }
+
+    /* Mobile Nav Toggle */
+    .mobile-menu-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-md);
+      background: var(--surface-subtle);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+    }
+
+    @media (min-width: 1024px) {
+      .mobile-menu-btn { display: none; }
+    }
+
+    .mobile-nav-drawer {
+      display: none;
+      flex-direction: column;
+      gap: var(--space-2);
+      padding: var(--space-4);
+      background: var(--surface-card);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .mobile-nav-drawer.open {
+      display: flex;
+    }
+
+    .mobile-nav-link {
+      padding: var(--space-3) var(--space-4);
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .mobile-nav-link.active {
+      background: var(--surface-subtle);
+      color: var(--accent-primary);
+    }
+
+    /* ==========================================
+       4. HERO SECTION
+       ========================================== */
+    .hero-section {
+      padding: var(--space-12) 0 var(--space-12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg-glow {
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+    }
+
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-bottom: var(--space-4);
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      box-shadow: var(--shadow-elevation-1);
+    }
+
+    .hero-pill.highlight {
+      border-color: var(--accent-primary);
+      color: var(--accent-primary);
+      background: rgba(14, 165, 233, 0.08);
+    }
+
+    .hero-lead {
+      font-size: clamp(1.05rem, 1vw + 0.9rem, 1.25rem);
+      color: var(--text-secondary);
+      margin-top: var(--space-4);
+      line-height: 1.7;
+    }
+
+    .hero-stats-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: var(--space-4);
+      margin-top: var(--space-8);
+      padding: var(--space-6);
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-elevation-1);
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    .stat-value {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-top: var(--space-1);
+    }
+
+    /* ==========================================
+       5. GENERAL CARD & BENTO GRID SYSTEM
+       ========================================== */
+    .section-block {
+      padding: var(--space-12) 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: var(--space-6);
+    }
+
+    .bento-card {
+      background-color: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      box-shadow: var(--shadow-elevation-1);
+      transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bento-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-accent);
+      box-shadow: var(--shadow-elevation-2);
+    }
+
+    .card-icon-header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      margin-bottom: var(--space-4);
+    }
+
+    .icon-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: var(--surface-subtle);
+      color: var(--accent-primary);
+      flex-shrink: 0;
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .card-body {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.65;
+      flex-grow: 1;
+    }
+
+    /* Col Span Utilities for Desktop */
+    .col-12 { grid-column: span 12; }
+    .col-8  { grid-column: span 12; }
+    .col-6  { grid-column: span 12; }
+    .col-4  { grid-column: span 12; }
+    .col-3  { grid-column: span 12; }
+
+    @media (min-width: 640px) {
+      .col-6-sm { grid-column: span 6; }
+      .col-4-sm { grid-column: span 6; }
+    }
+
+    @media (min-width: 1024px) {
+      .col-8 { grid-column: span 8; }
+      .col-6 { grid-column: span 6; }
+      .col-4 { grid-column: span 4; }
+      .col-3 { grid-column: span 3; }
+    }
+
+    /* Custom Alert Banners inside Cards */
+    .alert-card-box {
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      margin-top: var(--space-4);
+      font-size: 0.9rem;
+    }
+
+    .alert-card-box.danger {
+      background-color: var(--alert-danger-bg);
+      border: 1px solid var(--alert-danger-border);
+      color: var(--alert-danger-text);
+    }
+
+    .alert-card-box.medical {
+      background-color: var(--alert-medical-bg);
+      border: 1px solid var(--alert-medical-border);
+      color: var(--alert-medical-text);
+    }
+
+    .alert-title {
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      margin-bottom: var(--space-1);
+    }
+
+    /* List Item Custom Bullets */
+    .info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    .info-list li {
+      position: relative;
+      padding-left: 24px;
+    }
+
+    .info-list li::before {
+      content: "•";
+      position: absolute;
+      left: 6px;
+      top: -2px;
+      color: var(--accent-primary);
+      font-size: 1.4rem;
+    }
+
+    /* ==========================================
+       6. SECTION SPECIFIC STYLES
+       ========================================== */
+    
+    /* Weather Widget */
+    .weather-stat-display {
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-3);
+      margin: var(--space-4) 0;
+    }
+
+    .weather-temp {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+
+    .weather-badge {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      background: rgba(13, 148, 136, 0.12);
+      color: var(--accent-teal);
+      border: 1px solid rgba(13, 148, 136, 0.3);
+    }
+
+    /* Interactive Packing Checklist */
+    .packing-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      margin-top: var(--space-3);
+    }
+
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+      padding: var(--space-3);
+      background: var(--surface-subtle);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      cursor: pointer;
+      user-select: none;
+      transition: background var(--transition-fast);
+    }
+
+    .checklist-item:hover {
+      background: var(--surface-card);
+    }
+
+    .checklist-checkbox {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--text-muted);
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+      margin-top: 2px;
+      position: relative;
+      flex-shrink: 0;
+      transition: all var(--transition-fast);
+    }
+
+    .checklist-checkbox:checked {
+      background-color: var(--accent-primary);
+      border-color: var(--accent-primary);
+    }
+
+    .checklist-checkbox:checked::after {
+      content: "✓";
+      position: absolute;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      left: 3px;
+      top: -2px;
+    }
+
+    .checklist-text {
+      font-size: 0.92rem;
+      color: var(--text-primary);
+    }
+
+    .checklist-item.checked .checklist-text {
+      text-decoration: line-through;
+      color: var(--text-muted);
+    }
+
+    /* Shopping Filter & Cards */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-bottom: var(--space-6);
+    }
+
+    .filter-btn {
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      transition: all var(--transition-fast);
+    }
+
+    .filter-btn:hover {
+      color: var(--text-primary);
+      border-color: var(--border-accent);
+    }
+
+    .filter-btn.active {
+      background: var(--accent-primary);
+      color: #FFFFFF;
+      border-color: var(--accent-primary);
+      box-shadow: var(--shadow-elevation-1);
+    }
+
+    .location-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent-teal);
+      background: rgba(13, 148, 136, 0.08);
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      margin-bottom: var(--space-2);
+    }
+
+    /* Dining Section Tabs */
+    .tab-container {
+      margin-bottom: var(--space-6);
+    }
+
+    .tab-buttons {
+      display: inline-flex;
+      background: var(--surface-subtle);
+      padding: 4px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .tab-btn {
+      padding: 8px 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: var(--radius-full);
+      color: var(--text-secondary);
+      transition: all var(--transition-fast);
+    }
+
+    .tab-btn.active {
+      background: var(--surface-card);
+      color: var(--accent-primary);
+      box-shadow: var(--shadow-elevation-1);
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 250ms ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .dish-tag-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-4);
+    }
+
+    .dish-card {
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .dish-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--text-primary);
+    }
+
+    .dish-badge {
+      align-self: flex-start;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .dish-badge.veg {
+      background: rgba(34, 197, 94, 0.12);
+      color: #166534;
+      border: 1px solid rgba(34, 197, 94, 0.3);
+    }
+    [data-theme="dark"] .dish-badge.veg {
+      color: #86EFAC;
+    }
+
+    .dish-badge.nonveg {
+      background: rgba(239, 68, 68, 0.12);
+      color: #991B1B;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+    [data-theme="dark"] .dish-badge.nonveg {
+      color: #FCA5A5;
+    }
+
+    /* App Quadrant Grid */
+    .app-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-4);
+    }
+
+    .app-card {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+
+    .app-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      background: var(--surface-card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-primary);
+      flex-shrink: 0;
+      box-shadow: var(--shadow-elevation-1);
+    }
+
+    .app-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .app-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================
+       7. FOOTER
+       ========================================== */
+    .site-footer {
+      background-color: var(--surface-card);
+      border-top: 1px solid var(--border-subtle);
+      padding: var(--space-12) 0 var(--space-8);
+      margin-top: var(--space-16);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-6);
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .footer-inner {
+        flex-direction: row;
+        text-align: left;
+      }
+    }
+
+    .footer-text {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    .verification-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      background: rgba(34, 197, 94, 0.1);
+      color: #166534;
+      border: 1px solid rgba(34, 197, 94, 0.25);
+    }
+    [data-theme="dark"] .verification-badge {
+      color: #86EFAC;
+    }
+
+    .back-to-top {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent-primary);
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      background: var(--surface-subtle);
+      border: 1px solid var(--border-subtle);
+      transition: all var(--transition-fast);
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-elevation-1);
+    }
+
+    /* Utility Helpers */
+    .badge-pill {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      background: rgba(14, 165, 233, 0.1);
+      color: var(--accent-primary);
+      border: 1px solid rgba(14, 165, 233, 0.2);
+    }
+
+    .badge-amber {
+      background: rgba(217, 119, 6, 0.1);
+      color: var(--accent-amber);
+      border-color: rgba(217, 119, 6, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="site-header" id="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="brand-logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+          <span>ANTIGRAVITY</span>
+          <span class="brand-badge">Phuket Oct Guide</span>
+        </a>
+
+        <!-- Desktop Scrollspy Nav -->
+        <nav class="nav-scrollspy" aria-label="Main Navigation">
+          <a href="#advisory" class="nav-link active">01 Advisory</a>
+          <a href="#weather" class="nav-link">02 Weather</a>
+          <a href="#sightseeing" class="nav-link">03 Sights</a>
+          <a href="#gems" class="nav-link">04 Local Gems</a>
+          <a href="#shopping" class="nav-link">05 Shopping</a>
+          <a href="#dining" class="nav-link">06 Dining</a>
+          <a href="#logistics" class="nav-link">07 Logistics</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Light and Dark Theme" title="Toggle Theme">
+            <!-- Sun Icon (for Dark Mode state) -->
+            <svg id="sunIcon" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <!-- Moon Icon (for Light Mode state) -->
+            <svg id="moonIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+
+          <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Mobile Menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 22px; height: 22px;">
+              <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <a href="#advisory" class="mobile-nav-link active">01 Points to Remember</a>
+      <a href="#weather" class="mobile-nav-link">02 Weather & Packing</a>
+      <a href="#sightseeing" class="mobile-nav-link">03 Sightseeing & Activities</a>
+      <a href="#gems" class="mobile-nav-link">04 Local Gems & Experiences</a>
+      <a href="#shopping" class="mobile-nav-link">05 Shopping Directory</a>
+      <a href="#dining" class="mobile-nav-link">06 Food & Dining</a>
+      <a href="#logistics" class="mobile-nav-link">07 Logistics & Apps</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section class="hero-section">
+      <div class="hero-bg-glow"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-pills">
+            <span class="hero-pill highlight">📍 Phuket, Thailand</span>
+            <span class="hero-pill">🗓️ October Transition Period</span>
+            <span class="hero-pill">🌿 Monsoon Subsidizing</span>
+            <span class="hero-pill">✨ 100% Fact-Checked</span>
+          </div>
+          <h1 class="display-title">Travel Recommendation Guide: Phuket</h1>
+          <p class="hero-lead">
+            An editorial, curated travel specification for exploring Phuket during the October transition period. Experience lush green landscapes, fewer crowds, cultural festivities, and rich local gastronomy with complete clarity.
+          </p>
+
+          <div class="hero-stats-bar">
+            <div class="stat-item">
+              <span class="stat-label">Temperature</span>
+              <span class="stat-value">24°C – 31°C</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Humidity</span>
+              <span class="stat-value">~80% Average</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Currency</span>
+              <span class="stat-value">Thai Baht (THB)</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Sea Safety Flag</span>
+              <span class="stat-value" style="color: var(--accent-amber);">🚩 October Rip Currents</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 1: POINTS TO REMEMBER (ADVISORY)
+         ========================================== -->
+    <section class="section-block" id="advisory">
+      <div class="container">
+        <h2 class="section-title"><span class="section-number">01</span> Points to Remember</h2>
+        <p class="section-subtitle">Essential cultural etiquette, expert health advice, and local safety precautions for a seamless stay.</p>
+
+        <div class="bento-grid">
+          <!-- Card 1A: General Advice -->
+          <div class="bento-card col-4">
+            <div class="card-icon-header">
+              <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:24px;height:24px;">
+                  <rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/>
+                </svg>
+              </div>
+              <h3 class="card-title">General Advice</h3>
+            </div>
+            <div class="card-body">
+              <ul class="info-list">
+                <li><strong>Cash Reliance:</strong> Thailand is a cash-reliant society. While cards are accepted at major hotels and malls, carrying <strong>Thai Baht (THB)</strong> is essential for street food, local markets, and smaller transactions.</li>
+                <li><strong>Temple Dress Codes:</strong> When visiting temples or sacred sites, strict dress codes apply: both men and women must cover their shoulders and knees. Carrying a lightweight shawl or sarong is a great way to easily cover up.</li>
+                <li><strong>Shoe Removal Etiquette:</strong> You will often need to remove your shoes before entering temples and some local shops.</li>
+                <li><strong>Traditional Greeting:</strong> The traditional greeting, the <strong>"Wai"</strong> (pressing palms together), is a polite gesture to return when greeted.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 1B: Medical & Health Guidance -->
+          <div class="bento-card col-4">
+            <div class="card-icon-header">
+              <div class="icon-wrapper" style="color: var(--accent-teal); background: rgba(13, 148, 136, 0.12);">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:24px;height:24px;">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>
+                </svg>
+              </div>
+              <div>
+                <span class="badge-pill">Expert Doctor's Perspective</span>
+                <h3 class="card-title">Customized Medical & Health Advice</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <ul class="info-list">
+                <li><strong>Mosquito-Borne Illness Prevention:</strong> Dengue fever is a risk, especially around the rainy season; protect yourself by applying <strong>DEET-based insect repellent</strong> and wearing breathable, long-sleeved clothing, particularly during the day.</li>
+                <li><strong>Water Safety Mandate:</strong> Only consume bottled or filtered water.</li>
+                <li><strong>Digestive Health:</strong> Eat at busy, reputable eateries to prevent traveler's diarrhea.</li>
+                <li><strong>Hydration & Sun Defense:</strong> The tropical sun is intense even on cloudy days, so generous application of high-SPF sunscreen and adequate hydration with electrolyte tablets are crucial to prevent heat exhaustion.</li>
+              </ul>
+              
+              <div class="alert-card-box medical">
+                <div class="alert-title">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  Doctor's Key Note
+                </div>
+                Keep DEET repellent and electrolyte hydration tablets in your daypack at all times while exploring outdoor sights.
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 1C: Precautionary & Safety Tips -->
+          <div class="bento-card col-4">
+            <div class="card-icon-header">
+              <div class="icon-wrapper" style="color: var(--accent-amber); background: rgba(217, 119, 6, 0.12);">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:24px;height:24px;">
+                  <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/>
+                </svg>
+              </div>
+              <div>
+                <span class="badge-pill badge-amber">Local Guide's Perspective</span>
+                <h3 class="card-title">Precautionary & Preparation Tips</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <ul class="info-list">
+                <li><strong>Andaman Sea Rip Currents:</strong> The sea can be treacherous in October due to strong rip currents. Always heed beach warning flags.</li>
+                <li><strong>Transport Fare Agreement:</strong> If you are taking local transport like tuk-tuks or unmetered taxis, always agree on the exact fare before starting your journey to avoid disputes.</li>
+                <li><strong>Rain Protection:</strong> Given unpredictable tropical showers, keeping electronics and valuables in a reliable <strong>waterproof dry bag</strong> while exploring is a must.</li>
+              </ul>
+
+              <div class="alert-card-box danger" role="alert" aria-live="polite">
+                <div class="alert-title">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                  CRITICAL SEA SAFETY WARNING
+                </div>
+                <strong>RED FLAG = ABSOLUTELY NO ENTERING THE WATER.</strong> Never ignore red warning flags posted on Phuket beaches in October.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 2: WEATHER & PACKING
+         ========================================== -->
+    <section class="section-block" id="weather">
+      <div class="container">
+        <h2 class="section-title"><span class="section-number">02</span> Weather & Packing Recommendations</h2>
+        <p class="section-subtitle">Understand October's climate transition and prepare your wardrobe with precision.</p>
+
+        <div class="bento-grid">
+          <!-- Component 2A: October Climate Overview Card -->
+          <div class="bento-card col-6">
+            <div class="card-icon-header">
+              <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:24px;height:24px;">
+                  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/>
+                </svg>
+              </div>
+              <h3 class="card-title">Climate Overview: October Transition Period</h3>
+            </div>
+            <div class="card-body">
+              <p>Visiting in October means you are arriving during a <strong>transition period as the monsoon season begins to subside</strong>. It is still one of the wetter months, but you can expect <strong>fewer crowds and lush green landscapes</strong>.</p>
+              
+              <div class="weather-stat-display">
+                <div class="weather-temp">24°C – 31°C</div>
+                <div style="font-size:0.9rem; color:var(--text-muted);">(75°F – 88°F)</div>
+                <span class="weather-badge">80% Humidity</span>
+              </div>
+
+              <p style="margin-top: var(--space-3);">
+                <strong>Rainfall Pattern:</strong> Rain usually comes in <strong>short, intense bursts or afternoon thunderstorms</strong> rather than continuous all-day downpours, allowing for several hours of sunshine each day.
+              </p>
+            </div>
+          </div>
+
+          <!-- Component 2B: Packing Essentials Checklist -->
+          <div class="bento-card col-6">
+            <div class="card-icon-header">
+              <div class="icon-wrapper" style="color: var(--accent-primary);">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:24px;height:24px;">
+                  <path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v1"/><path d="M18 8h4a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-4"/><path d="M6 11V7"/><path d="M10 11V7"/>
+                </svg>
+              </div>
+              <h3 class="card-title">Packing Recommendations Checklist</h3>
+            </div>
+            <div class="card-body">
+              <p>Versatility and moisture management are key. Click items to check off as you pack:</p>
+
+              <div class="packing-list" id="packingChecklist">
+                <label class="checklist-item">
+                  <input type="checkbox" class="checklist-checkbox">
+                  <span class="checklist-text"><strong>Lightweight, Breathable Fabrics:</strong> Pack linen, bamboo, or moisture-wicking synthetics. <em>(Avoid heavy denim)</em></span>
+                </label>
+
+                <label class="checklist-item">
+                  <input type="checkbox" class="checklist-checkbox">
+                  <span class="checklist-text"><strong>Waterproof Outerwear:</strong> A high-quality waterproof shell jacket for sudden showers.</span>
+                </label>
+
+                <label class="checklist-item">
+                  <input type="checkbox" class="checklist-checkbox">
+                  <span class="checklist-text"><strong>Windproof Rain Gear:</strong> A compact windproof umbrella for daily carry.</span>
+                </label>
+
+                <label class="checklist-item">
+                  <input type="checkbox" class="checklist-checkbox">
+                  <span class="checklist-text"><strong>Non-Slip Footwear:</strong> Bring non-slip sandals, as walking surfaces get very slippery when wet.</span>
+                </label>
+
+                <label class="checklist-item">
+                  <input type="checkbox" class="checklist-checkbox">
+                  <span class="checklist-text"><strong>Temple-Appropriate Attire:</strong> Lightweight shawl/sarong or clothing covering shoulders and knees.</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3: SIGHTSEEING & ACTIVITIES
+         ========================================== -->
+    <section class="section-block" id="sightseeing">
+      <div class="container">
+        <h2 class="section-title"><span class="section-number">03</span> Sightseeing & Activities Matrix</h2>
+        <p class="section-subtitle">Top iconic sights, cultural highlights, and monsoon-optimized activities across Phuket.</p>
+
+        <div class="bento-grid">
+          <!-- Component 3A: Featured Highlight (Phuket Vegetarian Festival) Span 8 -->
+          <div class="bento-card col-8">
+            <div class="card-icon-header">
+              <div class="icon-wrapper" style="color: #E11D48; background: rgba(225, 29, 72, 0.12);">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:24px;height:24px;">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <div>
+                <span class="location-tag">📍 Phuket Town (e.g., Jui Tui Shrine)</span>
+                <span class="badge-pill badge-amber">October Exclusive Cultural Event</span>
+                <h3 class="card-title">Phuket Vegetarian Festival</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <p style="font-size: 1.05rem; line-height: 1.7;">
+                A unique cultural event held annually in October featuring spectacular street processions and sacred, intense rituals. Visitors can witness traditional Chinese-Thai spiritual devotion, vibrant street decorations, and try an incredible array of authentic vegetarian dishes prepared across Phuket Town.
+              </p>
+            </div>
+          </div>
+
+          <!-- Component 3B: Architectural Heritage Card (Old Phuket Town) Span 4 -->
+          <div class="bento-card col-4">
+            <div class="card-icon-header">
+              <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:24px;height:24px;">
+                  <path d="M3 21h18M3 7v14M21 7v14M6 21V11m4 10V11m4 10V11m4 10V11M12 3L2 7h20L12 3z"/>
+                </svg>
+              </div>
+              <div>
+                <span class="location-tag">📍 Phuket Town</span>
+                <h3 class="card-title">Old Phuket Town</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>Stroll historic streets admiring colorful Sino-Portuguese architecture, vibrant street art, and cozy local cafes.</p>
+              <div class="alert-card-box medical" style="margin-top:var(--space-3); padding:var(--space-2) var(--space-3);">
+                💡 <strong>Rainy Day Tip:</strong> Covered arcades and five-foot walkways offer easy shelter during sudden October showers.
+              </div>
+            </div>
+          </div>
+
+          <!-- Component 3C-3F: 4x 3-Column Grid Cards -->
+          <div class="bento-card col-3">
+            <div class="card-icon-header">
+              <div class="icon-wrapper">📍</div>
+              <div>
+                <span class="location-tag">Nakkerd Hills</span>
+                <h3 class="card-title" style="font-size:1.1rem;">Big Buddha</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>A massive, iconic landmark offering stunning 360-degree panoramic views of the island and surrounding ocean bays.</p>
+            </div>
+          </div>
+
+          <div class="bento-card col-3">
+            <div class="card-icon-header">
+              <div class="icon-wrapper">⛩️</div>
+              <div>
+                <span class="location-tag">Chalong</span>
+                <h3 class="card-title" style="font-size:1.1rem;">Wat Chalong</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>The largest and most culturally significant Buddhist temple in Phuket, renowned for its intricate architecture and sacred relics.</p>
+            </div>
+          </div>
+
+          <div class="bento-card col-3">
+            <div class="card-icon-header">
+              <div class="icon-wrapper">🌿</div>
+              <div>
+                <span class="location-tag">Thalang</span>
+                <h3 class="card-title" style="font-size:1.1rem;">Khao Phra Thaeo</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>Features vibrant jungle trekking and the <strong>Bang Pae Waterfall</strong>, which are exceptionally lush after monsoon rains.</p>
+            </div>
+          </div>
+
+          <div class="bento-card col-3">
+            <div class="card-icon-header">
+              <div class="icon-wrapper">🏄‍♂️</div>
+              <div>
+                <span class="location-tag">Kata & Patong Beaches</span>
+                <h3 class="card-title" style="font-size:1.1rem;">Surfing</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>October provides some of the best wave conditions for surfing on the island's west coast beaches.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 4: LOCAL EXPERIENCES & HIDDEN GEMS
+         ========================================== -->
+    <section class="section-block" id="gems">
+      <div class="container">
+        <h2 class="section-title"><span class="section-number">04</span> Local Experiences & Hidden Gems</h2>
+        <p class="section-subtitle">Curated off-the-beaten-path escapes and memorable authentic Thai experiences.</p>
+
+        <div class="bento-grid">
+          <!-- Card 4A: Freedom Beach -->
+          <div class="bento-card col-6">
+            <div class="card-icon-header">
+              <div class="icon-wrapper" style="color: var(--accent-teal);">🏖️</div>
+              <div>
+                <span class="badge-pill">Secluded Beach Escape</span>
+                <h3 class="card-title">Freedom Beach</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>Tucked away and accessible primarily by boat or a challenging hike, this secluded beach offers a serene escape with powdery white sand, far from the typical tourist crowds.</p>
+            </div>
+          </div>
+
+          <!-- Card 4B: Ao Sane Beach -->
+          <div class="bento-card col-6">
+            <div class="card-icon-header">
+              <div class="icon-wrapper" style="color: var(--accent-primary);">🏓</div>
+              <div>
+                <span class="badge-pill">Premier Snorkeling Spot</span>
+                <h3 class="card-title">Ao Sane Beach</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>Located near Nai Harn, this rocky, hidden spot is excellent for snorkeling and observing vibrant marine life right off the shore.</p>
+            </div>
+          </div>
+
+          <!-- Card 4C: Thai Culinary Discovery -->
+          <div class="bento-card col-6">
+            <div class="card-icon-header">
+              <div class="icon-wrapper" style="color: var(--accent-amber);">🍳</div>
+              <div>
+                <span class="badge-pill badge-amber">Culinary Immersion</span>
+                <h3 class="card-title">Thai Culinary Discovery</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>Take a local cooking class that includes a tour of the Phuket Town Central Market. It is a fantastic way to learn the secrets of Thai cuisine and experience authentic local life.</p>
+            </div>
+          </div>
+
+          <!-- Card 4D: Muay Thai Match -->
+          <div class="bento-card col-6">
+            <div class="card-icon-header">
+              <div class="icon-wrapper" style="color: #E11D48;">🥊</div>
+              <div>
+                <span class="badge-pill" style="color:#E11D48; border-color:rgba(225,29,72,0.3); background:rgba(225,29,72,0.1);">Cultural Athletic Tradition</span>
+                <h3 class="card-title">Muay Thai Match</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>Witnessing a professional Muay Thai match at a local stadium is a powerful way to experience a cornerstone of Thai culture and athletic tradition.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 5: SHOPPING DIRECTORY & MARKETS
+         ========================================== -->
+    <section class="section-block" id="shopping">
+      <div class="container">
+        <h2 class="section-title"><span class="section-number">05</span> Shopping Directory & Markets</h2>
+        <p class="section-subtitle">Filterable directory of weekend markets, walking streets, and modern shopping malls.</p>
+
+        <!-- Interactive Filter Bar -->
+        <div class="filter-bar">
+          <button class="filter-btn active" onclick="filterMarkets('all', this)">All Categories</button>
+          <button class="filter-btn" onclick="filterMarkets('weekend', this)">Weekend Markets</button>
+          <button class="filter-btn" onclick="filterMarkets('walking', this)">Walking Streets</button>
+          <button class="filter-btn" onclick="filterMarkets('night', this)">Night Markets</button>
+          <button class="filter-btn" onclick="filterMarkets('malls', this)">Modern Malls</button>
+        </div>
+
+        <div class="bento-grid" id="shoppingGrid">
+          <!-- Card 5A -->
+          <div class="bento-card col-6 market-item" data-category="weekend">
+            <div class="card-icon-header">
+              <div class="icon-wrapper">🛍️</div>
+              <div>
+                <span class="location-tag">📍 Phuket Town</span>
+                <h3 class="card-title">Naka Weekend Market</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <p><strong>Item Focus:</strong> Elephant Pants & Clothing</p>
+              <p style="margin-top: 6px;">The island’s largest weekend market, perfect for affordable clothing, electronics, and local street food.</p>
+            </div>
+          </div>
+
+          <!-- Card 5B -->
+          <div class="bento-card col-6 market-item" data-category="walking">
+            <div class="card-icon-header">
+              <div class="icon-wrapper">🎨</div>
+              <div>
+                <span class="location-tag">📍 Old Phuket Town</span>
+                <h3 class="card-title">Lard Yai (Sunday Walking Street)</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <p><strong>Item Focus:</strong> Local Handicrafts & Souvenirs</p>
+              <p style="margin-top: 6px;">A vibrant cultural market set against beautiful historic architecture, offering unique crafts.</p>
+            </div>
+          </div>
+
+          <!-- Card 5C -->
+          <div class="bento-card col-6 market-item" data-category="night">
+            <div class="card-icon-header">
+              <div class="icon-wrapper">✨</div>
+              <div>
+                <span class="location-tag">📍 Phuket Town</span>
+                <h3 class="card-title">Chillva Night Market</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <p><strong>Item Focus:</strong> Trendy Fashion & Crafts</p>
+              <p style="margin-top: 6px;">Known for its youthful vibe, great for picking up trendy fashion items and enjoying local snacks.</p>
+            </div>
+          </div>
+
+          <!-- Card 5D -->
+          <div class="bento-card col-6 market-item" data-category="malls">
+            <div class="card-icon-header">
+              <div class="icon-wrapper">💆‍♀️</div>
+              <div>
+                <span class="location-tag">📍 Patong / Phuket Town</span>
+                <h3 class="card-title">Jungceylon or Central Phuket</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <p><strong>Item Focus:</strong> Spa & Wellness Products</p>
+              <p style="margin-top: 6px;">Modern malls where you can find high-quality coconut oil, herbal compress balls, and essential oils.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 6: FOOD & DINING SHOWCASE
+         ========================================== -->
+    <section class="section-block" id="dining">
+      <div class="container">
+        <h2 class="section-title"><span class="section-number">06</span> Food & Dining Showcase</h2>
+        <p class="section-subtitle">Must-try local dishes and fact-checked vegetarian, vegan, and Indian restaurant recommendations.</p>
+
+        <!-- Sub-Component 6A: Must-Try Dishes Tag Cloud & Filter -->
+        <div class="tab-container">
+          <div class="tab-buttons">
+            <button class="tab-btn active" onclick="switchDiningTab('veg-dishes', this)">Vegetarian Must-Try</button>
+            <button class="tab-btn" onclick="switchDiningTab('nonveg-dishes', this)">Non-Vegetarian Must-Try</button>
+          </div>
+        </div>
+
+        <!-- Veg Dishes Panel -->
+        <div class="tab-content active" id="veg-dishes">
+          <div class="dish-tag-grid">
+            <div class="dish-card">
+              <span class="dish-badge veg">Vegetarian / Vegan Option</span>
+              <div class="dish-name">Som Tum</div>
+              <p style="font-size:0.88rem; color:var(--text-secondary);">
+                Green Papaya Salad — <em><strong>Crucial Note:</strong> Always request it explicitly without dried shrimp or fish sauce ("Je" or "No fish sauce").</em>
+              </p>
+            </div>
+
+            <div class="dish-card">
+              <span class="dish-badge veg">Pure Vegetarian</span>
+              <div class="dish-name">Pad Thai Je</div>
+              <p style="font-size:0.88rem; color:var(--text-secondary);">
+                Vegetarian Pad Thai prepared with tofu, bean sprouts, peanuts, and flavorful tamarind sauce without fish sauce.
+              </p>
+            </div>
+
+            <div class="dish-card">
+              <span class="dish-badge veg">Vegetarian / Vegan</span>
+              <div class="dish-name">Tom Kha Hed</div>
+              <p style="font-size:0.88rem; color:var(--text-secondary);">
+                A aromatic, rich Coconut Mushroom Soup infused with galangal, lemongrass, kaffir lime leaves, and chili.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Non-Veg Dishes Panel -->
+        <div class="tab-content" id="nonveg-dishes">
+          <div class="dish-tag-grid">
+            <div class="dish-card">
+              <span class="dish-badge nonveg">Non-Vegetarian</span>
+              <div class="dish-name">Tom Yum Goong</div>
+              <p style="font-size:0.88rem; color:var(--text-secondary);">
+                Spicy Shrimp Soup — Iconic Thai soup bursting with fresh prawns, lemongrass, kaffir lime, and fiery chilis.
+              </p>
+            </div>
+
+            <div class="dish-card">
+              <span class="dish-badge nonveg">Non-Vegetarian</span>
+              <div class="dish-name">Massaman Curry</div>
+              <p style="font-size:0.88rem; color:var(--text-secondary);">
+                A rich, mild curry usually made with tender beef or chicken, potatoes, peanuts, and aromatic warm spices.
+              </p>
+            </div>
+
+            <div class="dish-card">
+              <span class="dish-badge nonveg">Non-Vegetarian</span>
+              <div class="dish-name">Moo Ping</div>
+              <p style="font-size:0.88rem; color:var(--text-secondary);">
+                Grilled Pork Skewers marinating in sweet savory coconut milk glaze, popular street food across markets.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub-Component 6B: Vegetarian/Vegan Restaurants -->
+        <h3 style="font-family: var(--font-display); margin: var(--space-8) 0 var(--space-4); font-size: 1.4rem;">
+          🌱 Vegetarian & Vegan Restaurants
+        </h3>
+        <div class="bento-grid">
+          <div class="bento-card col-6">
+            <div class="card-icon-header">
+              <div class="icon-wrapper" style="color: #22C55E; background: rgba(34,197,94,0.12);">🥗</div>
+              <div>
+                <span class="location-tag">📍 Near Old Town</span>
+                <h3 class="card-title">Ubuntu Eat</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <p><strong>Specialty:</strong> Offers a massive menu with extensive vegan-friendly selections spanning multiple cuisines.</p>
+            </div>
+          </div>
+
+          <div class="bento-card col-6">
+            <div class="card-icon-header">
+              <div class="icon-wrapper" style="color: #22C55E; background: rgba(34,197,94,0.12);">🍲</div>
+              <div>
+                <span class="location-tag">📍 Kamala (Delivery to Patong available)</span>
+                <h3 class="card-title">Sam’s Indian Restaurant</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <p><strong>Specialty:</strong> Clearly labels vegan options, featuring excellent chana masala and various vegetable curries.</p>
+              <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 4px;">*Note: Located in Kamala with delivery service to Patong area.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub-Component 6C: Indian Restaurants -->
+        <h3 style="font-family: var(--font-display); margin: var(--space-8) 0 var(--space-4); font-size: 1.4rem;">
+          🍛 Authentic Indian Restaurants
+        </h3>
+        <div class="bento-grid">
+          <div class="bento-card col-4">
+            <div class="card-icon-header">
+              <div class="icon-wrapper" style="color: var(--accent-amber);">🇮🇳</div>
+              <div>
+                <span class="location-tag">📍 Patong</span>
+                <h3 class="card-title">Shiv Sagar</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <p><strong>Specialty:</strong> Highly recommended for pure vegetarian and Jain-friendly authentic Indian food.</p>
+            </div>
+          </div>
+
+          <div class="bento-card col-4">
+            <div class="card-icon-header">
+              <div class="icon-wrapper" style="color: var(--accent-amber);">🇮🇳</div>
+              <div>
+                <span class="location-tag">📍 Patong</span>
+                <h3 class="card-title">Madras Cafe</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <p><strong>Specialty:</strong> Known for authentic South Indian cuisine, including dosas and idlis.</p>
+            </div>
+          </div>
+
+          <div class="bento-card col-4">
+            <div class="card-icon-header">
+              <div class="icon-wrapper" style="color: var(--accent-amber);">🇮🇳</div>
+              <div>
+                <span class="location-tag">📍 Patong / Cherngtalay</span>
+                <h3 class="card-title">Little Prince Indian Cuisine</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <p><strong>Specialty:</strong> Caters to diverse dietary needs with dedicated vegetarian, vegan, and Jain options.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 7: LOGISTICS & PRACTICAL UTILITY
+         ========================================== -->
+    <section class="section-block" id="logistics">
+      <div class="container">
+        <h2 class="section-title"><span class="section-number">07</span> Logistics & Practical Utilities</h2>
+        <p class="section-subtitle">Connectivity, local transportation options, and recommended mobile applications.</p>
+
+        <div class="bento-grid">
+          <!-- SIM Cards -->
+          <div class="bento-card col-6">
+            <div class="card-icon-header">
+              <div class="icon-wrapper" style="color: var(--accent-primary);">📱</div>
+              <div>
+                <span class="badge-pill">Connectivity & Data</span>
+                <h3 class="card-title">SIM Cards & Mobile Networks</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <ul class="info-list">
+                <li><strong>Best Networks:</strong> <strong>AIS</strong> and <strong>True</strong> offer the best coverage and speeds across Phuket.</li>
+                <li><strong>Airport Option:</strong> Purchase a tourist SIM card directly at the airport upon arrival <em>(passport required for registration)</em>.</li>
+                <li><strong>eSIM Alternative:</strong> Use an eSIM service to activate data before landing for immediate connectivity.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Local Transport -->
+          <div class="bento-card col-6">
+            <div class="card-icon-header">
+              <div class="icon-wrapper" style="color: var(--accent-teal);">🚖</div>
+              <div>
+                <span class="badge-pill">Transport Options</span>
+                <h3 class="card-title">Local Transportation</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <ul class="info-list">
+                <li><strong>Ride-Hailing:</strong> Ride-sharing apps are highly recommended for reliable transport. <strong>Grab</strong> is widely used; <strong>Bolt</strong> often offers cheaper rates.</li>
+                <li><strong>Public Bus Option:</strong> For budget travel along the coast, the air-conditioned <strong>Phuket Smart Bus</strong> connects the airport to popular beach towns.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Essential Apps Grid (Col 12) -->
+          <div class="bento-card col-12">
+            <div class="card-icon-header">
+              <div class="icon-wrapper">📲</div>
+              <h3 class="card-title">Essential Mobile Applications</h3>
+            </div>
+            <div class="card-body">
+              <div class="app-grid">
+                <div class="app-card">
+                  <div class="app-icon">🚗</div>
+                  <div>
+                    <div class="app-title">Grab & Bolt</div>
+                    <div class="app-desc">Safe & reliable ride-hailing</div>
+                  </div>
+                </div>
+
+                <div class="app-card">
+                  <div class="app-icon">🗺️</div>
+                  <div>
+                    <div class="app-title">Google Maps</div>
+                    <div class="app-desc">Essential for island navigation</div>
+                  </div>
+                </div>
+
+                <div class="app-card">
+                  <div class="app-icon">🛵</div>
+                  <div>
+                    <div class="app-title">Foodpanda / GrabFood</div>
+                    <div class="app-desc">Local food delivery to stay</div>
+                  </div>
+                </div>
+
+                <div class="app-card">
+                  <div class="app-icon">🗣️</div>
+                  <div>
+                    <div class="app-title">Google Translate</div>
+                    <div class="app-desc">Language translation with vendors</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 6px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+            <span>ANTIGRAVITY TRAVEL</span>
+          </div>
+          <p class="footer-text">Editorial Travel Guide • Phuket, Thailand • October Transition Period</p>
+        </div>
+
+        <div class="verification-badge">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          100% Fact-Checked & Verified
+        </div>
+
+        <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+          Back to Top
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       JAVASCRIPT LOGIC
+       ========================================== -->
+  <script>
+    // 1. Theme Toggle System
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const sunIcon = document.getElementById('sunIcon');
+    const moonIcon = document.getElementById('moonIcon');
+    const htmlElement = document.documentElement;
+
+    function setTheme(theme) {
+      htmlElement.setAttribute('data-theme', theme);
+      if (theme === 'dark') {
+        sunIcon.style.display = 'block';
+        moonIcon.style.display = 'none';
+      } else {
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'block';
+      }
+      localStorage.setItem('phuket_guide_theme', theme);
+    }
+
+    // Initialize Theme
+    const savedTheme = localStorage.getItem('phuket_guide_theme') || 
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    setTheme(savedTheme);
+
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = htmlElement.getAttribute('data-theme');
+      setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    });
+
+    // 2. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileNavDrawer.classList.toggle('open');
+    });
+
+    // Close mobile nav drawer when link clicked
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNavDrawer.classList.remove('open');
+      });
+    });
+
+    // 3. Scrollspy Navigation Indicator
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+
+      mobileNavLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // 4. Shopping Market Filtering
+    function filterMarkets(category, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const items = document.querySelectorAll('.market-item');
+      items.forEach(item => {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // 5. Dining Tab Switcher
+    function switchDiningTab(tabId, btn) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+
+    // 6. Interactive Packing Checklist Toggling
+    document.querySelectorAll('#packingChecklist .checklist-item').forEach(item => {
+      const checkbox = item.querySelector('.checklist-checkbox');
+      checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+          item.classList.add('checked');
+        } else {
+          item.classList.remove('checked');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
