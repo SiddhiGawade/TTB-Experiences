@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phuket, Thailand — October Travel Guide</title>
+  <meta name="description" content="A premium, immersive travel recommendation guide for Phuket, Thailand in October. Discover sightseeing, food, shopping, local experiences, and logistics tips.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <style>
+    /* ==========================================
+       DESIGN TOKENS
+    ========================================== */
+    :root {
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-heading: 'Plus Jakarta Sans', sans-serif;
+      --font-body:    'Inter', -apple-system, sans-serif;
+
+      --space-1: 4px;  --space-2: 8px;   --space-3: 12px; --space-4: 16px;
+      --space-5: 20px; --space-6: 24px;  --space-8: 32px; --space-10: 40px;
+      --space-12: 48px; --space-16: 64px; --space-20: 80px;
+
+      --radius-sm: 6px; --radius-md: 12px; --radius-lg: 18px;
+      --radius-xl: 24px; --radius-pill: 9999px;
+
+      /* Phuket Sunset Palette */
+      --ocean:        hsl(184, 88%, 30%);
+      --ocean-hover:  hsl(184, 88%, 24%);
+      --ocean-light:  hsl(184, 80%, 94%);
+      --sand:         hsl(38, 90%, 55%);
+      --sand-light:   hsl(38, 90%, 94%);
+      --coral:        hsl(14, 85%, 55%);
+      --coral-light:  hsl(14, 85%, 94%);
+      --jungle:       hsl(150, 55%, 35%);
+      --jungle-light: hsl(150, 55%, 93%);
+
+      /* Warm Beige — New Signature Palette */
+      --beige:       hsl(38, 30%, 92%);
+      --beige-mid:   hsl(38, 22%, 84%);
+      --beige-deep:  hsl(38, 20%, 72%);
+      --beige-text:  hsl(32, 30%, 30%);
+    }
+
+    /* ---- DARK THEME ---- */
+    [data-theme="dark"] {
+      /* Warmer near-black — less saturated, less "developer blue" */
+      --bg-page:    hsl(224, 14%, 7%);
+      --bg-card:    hsl(226, 14%, 11%);
+      --bg-subtle:  hsl(226, 12%, 16%);
+
+      /* Brighter accent colors — pop on dark bg */
+      --ocean:        hsl(184, 75%, 38%);
+      --ocean-hover:  hsl(184, 75%, 30%);
+      --sand:         hsl(38, 88%, 60%);
+
+      /* Text — warmer white, cleaner hierarchy */
+      --text-main:  hsl(210, 18%, 93%);
+      --text-muted: hsl(215, 14%, 58%);
+      --text-soft:  hsl(215, 10%, 40%);
+
+      /* Borders — soft alpha, not harsh solid lines */
+      --border:       rgba(255, 255, 255, 0.07);
+      --border-hover: rgba(255, 255, 255, 0.14);
+
+      /* Shadows — layered depth */
+      --shadow-card:  inset 0 1px 0 rgba(255,255,255,0.05), 0 4px 24px rgba(0,0,0,0.55);
+      --shadow-hover: inset 0 1px 0 rgba(255,255,255,0.09), 0 20px 60px rgba(0,0,0,0.7), 0 0 0 1px rgba(13,148,136,0.22), 0 0 48px rgba(13,148,136,0.07);
+
+      --nav-bg: rgba(10, 12, 20, 0.94);
+
+      /* Beige — warm amber dark, visibly distinct from page */
+      --beige:       hsl(38, 20%, 11%);
+      --beige-mid:   hsl(38, 16%, 19%);
+      --beige-deep:  hsl(38, 14%, 28%);
+      --beige-text:  hsl(38, 25%, 58%);
+      color-scheme: dark;
+    }
+
+    /* ---- LIGHT THEME ---- */
+    [data-theme="light"] {
+      --bg-page:    hsl(38, 12%, 97%);   /* Very slightly warm white */
+      --bg-card:    #ffffff;
+      --bg-subtle:  hsl(38, 18%, 93%);
+      --text-main:  hsl(220, 35%, 10%);
+      --text-muted: hsl(220, 15%, 40%);
+      --text-soft:  hsl(220, 12%, 58%);
+      --border:     hsl(38, 18%, 86%);
+      --border-hover: hsl(38, 16%, 72%);
+      --shadow-card: 0 4px 16px rgba(0,0,0,0.06);
+      --shadow-hover: 0 20px 60px rgba(0,0,0,0.11);
+      --nav-bg: rgba(253, 251, 248, 0.92);
+      color-scheme: light;
+    }
+
+    /* ==========================================
+       LUCIDE ICON SYSTEM
+    ========================================== */
+    .icon { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; line-height: 1; }
+    .icon svg { stroke-width: 1.75; display: block; }
+    .icon--xs  svg { width: 12px; height: 12px; }
+    .icon--sm  svg { width: 14px; height: 14px; }
+    .icon--md  svg { width: 18px; height: 18px; }
+    .icon--lg  svg { width: 22px; height: 22px; }
+    .icon--xl  svg { width: 28px; height: 28px; }
+    .icon--2xl svg { width: 38px; height: 38px; }
+    .icon--3xl svg { width: 52px; height: 52px; }
+    .icon--teal   { color: var(--ocean); }
+    .icon--sand   { color: var(--sand); }
+    .icon--coral  { color: var(--coral); }
+    .icon--jungle { color: var(--jungle); }
+    .icon--muted  { color: var(--text-soft); }
+    .icon--white  { color: #ffffff; }
+    .icon--main   { color: var(--text-main); }
+
+    /* Decorative bento background icons */
+    .icon--deco {
+      position: absolute; bottom: -8px; right: -4px;
+      opacity: 0.06; pointer-events: none; user-select: none;
+    }
+    .icon--deco svg { width: 100px; height: 100px; stroke-width: 1; }
+    .bento-card--featured .icon--deco svg { width: 150px; height: 150px; }
+
+    /* ==========================================
+       BASE RESET
+    ========================================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    a { color: var(--ocean); text-decoration: none; transition: color 0.15s; }
+    a:hover { color: var(--ocean-hover); }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 var(--space-5); }
+    @media (min-width: 768px) { .container { padding: 0 var(--space-8); } }
+
+    /* ==========================================
+       NAVIGATION
+    ========================================== */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--nav-bg);
+      backdrop-filter: blur(18px) saturate(200%);
+      -webkit-backdrop-filter: blur(18px) saturate(200%);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+    [data-theme="dark"] .nav {
+      box-shadow: 0 1px 0 rgba(255,255,255,0.04), 0 4px 24px rgba(0,0,0,0.4);
+    }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .nav__brand {
+      font-family: var(--font-display);
+      font-size: 20px; font-weight: 700;
+      color: var(--text-main);
+      display: flex; align-items: center; gap: var(--space-2);
+    }
+    .nav__brand-dot { color: var(--ocean); }
+    .nav__links { display: none; align-items: center; gap: var(--space-6); list-style: none; }
+    @media (min-width: 900px) { .nav__links { display: flex; } }
+    .nav__links a {
+      font-family: var(--font-heading); font-size: 12px; font-weight: 700;
+      color: var(--text-muted); letter-spacing: 0.06em;
+      transition: color 0.15s; text-transform: uppercase;
+    }
+    .nav__links a:hover { color: var(--ocean); }
+    .nav__actions { display: flex; align-items: center; }
+    .theme-toggle {
+      width: 40px; height: 40px; border-radius: 50%;
+      border: 1px solid var(--border); background: var(--bg-subtle);
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s; color: var(--text-muted);
+    }
+    .theme-toggle:hover { border-color: var(--ocean); color: var(--ocean); }
+    .theme-toggle svg { width: 17px; height: 17px; stroke-width: 1.75; }
+
+    /* ==========================================
+       HERO — Cinematic Centered Redesign
+    ========================================== */
+    .hero {
+      position: relative; min-height: 100vh;
+      display: flex; flex-direction: column;
+      align-items: stretch; justify-content: stretch;
+      overflow: hidden;
+    }
+    .hero__bg {
+      position: absolute; inset: 0;
+      background-image: url('phuket_bg.jpg');
+      background-size: cover; background-position: center 30%;
+    }
+    /* Theme-agnostic dark scrim — always cinematic */
+    .hero__overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(3, 6, 14, 0.97) 0%,
+        rgba(3, 6, 14, 0.60) 40%,
+        rgba(3, 6, 14, 0.18) 72%,
+        rgba(3, 6, 14, 0.06) 100%
+      );
+    }
+
+    /* Centered main content — vertically and horizontally */
+    .hero__content {
+      position: relative; z-index: 2;
+      flex: 1;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      padding: 120px var(--space-5) 100px;
+    }
+
+    .hero__eyebrow {
+      font-family: var(--font-heading);
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.38em; text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: var(--space-10);
+      animation: fadeSlideUp 0.8s ease both;
+    }
+
+    .hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(80px, 14vw, 158px);
+      font-weight: 900; line-height: 0.92; letter-spacing: 0.08em;
+      color: #ffffff;
+      text-shadow: 0 8px 60px rgba(0,0,0,0.35);
+      margin-bottom: 0;
+      animation: fadeSlideUp 0.9s 0.1s ease both;
+    }
+
+    .hero__rule {
+      width: 90px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--sand), transparent);
+      margin: 24px auto 20px;
+      animation: fadeSlideUp 1s 0.2s ease both;
+    }
+
+    .hero__subtitle {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 4vw, 34px);
+      font-weight: 400; font-style: italic;
+      color: rgba(255,255,255,0.78);
+      letter-spacing: 0.12em;
+      margin-bottom: var(--space-8);
+      animation: fadeSlideUp 1s 0.25s ease both;
+    }
+
+    .hero__lead {
+      font-family: var(--font-heading);
+      font-size: 13px; font-weight: 500;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.08em; text-transform: uppercase;
+      animation: fadeSlideUp 1.1s 0.35s ease both;
+    }
+
+    /* Full-width frosted glass stats bar anchored at bottom */
+    .hero__stats-bar {
+      position: relative; z-index: 2;
+      background: linear-gradient(
+        to right,
+        rgba(234,179,8,0.05),
+        rgba(255,255,255,0.06),
+        rgba(234,179,8,0.05)
+      );
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      border-top: 1px solid rgba(255,255,255,0.10);
+      animation: fadeSlideUp 1.2s 0.5s ease both;
+    }
+    .hero__stats-inner {
+      display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch;
+    }
+    .hero__stat {
+      display: flex; align-items: center; gap: 10px;
+      padding: 22px 36px;
+      border-right: 1px solid rgba(255,255,255,0.08);
+      font-family: var(--font-heading); font-size: 13px; font-weight: 600;
+      color: rgba(255,255,255,0.80);
+    }
+    .hero__stat:last-child { border-right: none; }
+    .hero__stat .icon svg { width: 15px; height: 15px; stroke-width: 2; }
+    .hero__stat-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: rgba(255,255,255,0.38);
+      display: block; margin-bottom: 1px;
+    }
+    .hero__stat-value { color: rgba(255,255,255,0.86); }
+
+    /* Scroll cue */
+    .hero__scroll {
+      position: absolute; bottom: 90px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 4px;
+      color: rgba(255,255,255,0.38);
+      font-family: var(--font-heading); font-size: 10px; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      animation: bounce 2.5s infinite;
+      z-index: 2;
+    }
+    .hero__scroll svg { width: 20px; height: 20px; stroke-width: 1.5; }
+
+    /* Gradient bridge — seamless hero → page transition */
+    .hero__bridge {
+      height: 60px; margin-top: -1px;
+      background: linear-gradient(to bottom, rgba(3,6,14,0.97), var(--bg-page));
+    }
+
+    /* ==========================================
+       SECTION WRAPPER
+    ========================================== */
+    .section {
+      padding: var(--space-16) 0 var(--space-10);
+      position: relative;
+    }
+    /* Elegant · · · dot divider */
+    .section::after {
+      content: '· · ·';
+      display: block;
+      text-align: center;
+      color: var(--beige-mid);
+      font-size: 18px; letter-spacing: 0.6em;
+      padding: var(--space-10) 0 0;
+    }
+    [data-theme="dark"] .section::after { color: hsl(38, 20%, 26%); }
+    .section:last-of-type::after { display: none; }
+
+    /* Beige section variant */
+    .section--beige {
+      background: var(--beige);
+    }
+    .section--beige::after { color: var(--beige-deep); }
+
+    /* Section header */
+    .section__header { margin-bottom: var(--space-10); }
+
+    .section__eyebrow {
+      display: inline-flex; align-items: center; gap: var(--space-2);
+      background: var(--beige); color: var(--beige-text);
+      border: 1px solid var(--beige-mid);
+      border-radius: var(--radius-pill);
+      padding: 5px 14px;
+      font-family: var(--font-heading); font-size: 10px; font-weight: 800;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      margin-bottom: var(--space-4);
+    }
+    [data-theme="dark"] .section__eyebrow {
+      background: var(--beige); color: var(--beige-text);
+      border-color: var(--beige-mid);
+    }
+    .section--beige .section__eyebrow {
+      background: var(--beige-mid); border-color: var(--beige-deep);
+    }
+    [data-theme="dark"] .section--beige .section__eyebrow {
+      background: rgba(234,179,8,0.10); color: hsl(38,80%,62%);
+      border-color: rgba(234,179,8,0.22);
+    }
+
+    .section__title {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 4vw, 42px); font-weight: 700;
+      color: var(--text-main); letter-spacing: -0.02em; line-height: 1.15;
+    }
+    .section__title em {
+      font-style: italic; font-weight: 400; color: var(--text-soft);
+      font-size: 0.72em; letter-spacing: 0;
+    }
+    .section__lead {
+      font-size: 15px; color: var(--text-muted);
+      margin-top: var(--space-3); max-width: 680px; line-height: 1.75;
+    }
+
+    /* ==========================================
+       CARDS — BASE
+    ========================================== */
+    .card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-card);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    /* Dark mode cards — glassmorphism surface */
+    [data-theme="dark"] .card {
+      background: linear-gradient(
+        145deg,
+        hsl(226, 16%, 13%) 0%,
+        hsl(226, 14%, 11%) 100%
+      );
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        0 4px 24px rgba(0, 0, 0, 0.55);
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover), 0 0 0 1px var(--beige-mid);
+      border-color: var(--beige-mid);
+    }
+    [data-theme="dark"] .card:hover {
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.10),
+        0 20px 60px rgba(0, 0, 0, 0.7),
+        0 0 0 1px rgba(13, 148, 136, 0.22),
+        0 0 48px rgba(13, 148, 136, 0.07);
+    }
+
+    /* ==========================================
+       §1 POINTS TO REMEMBER
+    ========================================== */
+    .advice-grid { display: grid; gap: var(--space-6); grid-template-columns: 1fr; }
+    @media (min-width: 900px) { .advice-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .advice-card {
+      padding: var(--space-6); border-radius: var(--radius-lg);
+      position: relative; overflow: hidden;
+      background: #fff;                           /* explicit white on beige bg */
+      border-top: 3px solid transparent;
+    }
+    [data-theme="dark"] .advice-card { background: var(--bg-card); }
+
+    .advice-card--teal  { border-top-color: var(--ocean); }
+    .advice-card--amber { border-top-color: var(--sand); }
+    .advice-card--coral { border-top-color: var(--coral); }
+
+    .advice-card__icon-wrap {
+      width: 46px; height: 46px; border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: var(--space-4);
+    }
+    .advice-card--teal  .advice-card__icon-wrap { background: var(--ocean-light); }
+    .advice-card--amber .advice-card__icon-wrap { background: var(--sand-light); }
+    .advice-card--coral .advice-card__icon-wrap { background: var(--coral-light); }
+    /* Glowing colored icon wraps in dark mode */
+    [data-theme="dark"] .advice-card--teal  .advice-card__icon-wrap {
+      background: rgba(13,148,136,0.14);
+      box-shadow: 0 0 22px rgba(13,148,136,0.22), inset 0 1px 0 rgba(13,148,136,0.28);
+    }
+    [data-theme="dark"] .advice-card--amber .advice-card__icon-wrap {
+      background: rgba(234,179,8,0.12);
+      box-shadow: 0 0 22px rgba(234,179,8,0.18), inset 0 1px 0 rgba(234,179,8,0.25);
+    }
+    [data-theme="dark"] .advice-card--coral .advice-card__icon-wrap {
+      background: rgba(239,68,68,0.12);
+      box-shadow: 0 0 22px rgba(239,68,68,0.16), inset 0 1px 0 rgba(239,68,68,0.22);
+    }
+
+    .advice-card__label {
+      font-family: var(--font-heading); font-size: 10px; font-weight: 800;
+      letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: var(--space-1);
+    }
+    .advice-card--teal  .advice-card__label { color: var(--ocean); }
+    .advice-card--amber .advice-card__label { color: var(--sand); }
+    .advice-card--coral .advice-card__label { color: var(--coral); }
+
+    .advice-card__title {
+      font-family: var(--font-heading); font-size: 18px; font-weight: 700;
+      color: var(--text-main); margin-bottom: var(--space-4);
+    }
+    .advice-list { list-style: none; display: flex; flex-direction: column; gap: var(--space-3); }
+    .advice-item {
+      display: flex; align-items: flex-start; gap: var(--space-2);
+      font-size: 13.5px; color: var(--text-muted); line-height: 1.6;
+    }
+    .advice-item .icon { margin-top: 3px; }
+    .alert-box {
+      display: flex; align-items: center; gap: var(--space-2);
+      background: rgba(239,68,68,0.10); border: 1px solid rgba(239,68,68,0.35);
+      border-radius: var(--radius-sm); padding: var(--space-2) var(--space-3);
+      margin-top: var(--space-3); font-size: 12.5px; font-weight: 700;
+      color: #f87171;
+    }
+
+    /* ==========================================
+       §2 WEATHER & PACKING
+    ========================================== */
+    .weather-grid { display: grid; gap: var(--space-6); grid-template-columns: 1fr; }
+    @media (min-width: 768px) { .weather-grid { grid-template-columns: 1fr 1fr; } }
+
+    .weather-card { padding: var(--space-6); }
+    .weather-card__label {
+      font-family: var(--font-heading); font-size: 10px; font-weight: 800;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--ocean); margin-bottom: var(--space-2);
+    }
+    .weather-card__title {
+      font-family: var(--font-heading); font-size: 22px; font-weight: 700;
+      color: var(--text-main); margin-bottom: var(--space-4);
+    }
+    .temp-display {
+      font-family: var(--font-display);
+      font-size: 56px; font-weight: 700; line-height: 1;
+      color: var(--sand);
+      text-shadow: 0 2px 24px rgba(234,179,8,0.28);
+      margin: var(--space-4) 0;
+    }
+    [data-theme="dark"] .temp-display {
+      text-shadow: 0 0 50px rgba(234,179,8,0.40), 0 4px 20px rgba(234,179,8,0.25);
+    }
+    .temp-display span { font-size: 24px; color: var(--text-muted); }
+    .weather-pills { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-4); }
+    .weather-pill {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: var(--beige); border: 1px solid var(--beige-mid);
+      border-radius: var(--radius-pill); padding: 6px 14px;
+      font-size: 12px; font-weight: 600; color: var(--beige-text);
+    }
+    [data-theme="dark"] .weather-pill {
+      background: linear-gradient(135deg, hsl(226,16%,16%), hsl(226,14%,14%));
+      color: var(--text-muted); border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+    .weather-pill .icon svg { width: 13px; height: 13px; }
+    .weather-desc { font-size: 14px; color: var(--text-muted); line-height: 1.75; }
+
+    /* Packing checklist */
+    .checklist-group { margin-bottom: var(--space-5); }
+    .checklist-group__title {
+      font-family: var(--font-heading); font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--text-soft); margin-bottom: var(--space-3);
+      display: flex; align-items: center; gap: var(--space-2);
+    }
+    .checklist-group__title .icon svg { width: 13px; height: 13px; }
+    .checklist-item {
+      display: flex; align-items: center; gap: var(--space-3);
+      font-size: 14px; color: var(--text-muted); padding: var(--space-2) var(--space-3);
+      border-radius: var(--radius-sm); cursor: pointer; transition: background 0.15s;
+      border-bottom: 1px solid var(--border);
+    }
+    .checklist-item:last-child { border-bottom: none; }
+    .checklist-item:hover { background: var(--beige); }
+    [data-theme="dark"] .checklist-item:hover { background: var(--bg-subtle); }
+    .checklist-item input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--ocean); cursor: pointer; flex-shrink: 0; }
+    .checklist-item.checked { color: var(--text-soft); }
+    .checklist-item.checked label { text-decoration: line-through; }
+    .checklist-item label { cursor: pointer; flex: 1; }
+    .reset-btn {
+      margin-top: var(--space-4);
+      display: inline-flex; align-items: center; gap: var(--space-2);
+      background: var(--beige); border: 1px solid var(--beige-mid);
+      border-radius: var(--radius-pill); padding: 7px 18px;
+      font-family: var(--font-heading); font-size: 12px; font-weight: 700;
+      color: var(--beige-text); cursor: pointer; transition: all 0.2s;
+    }
+    [data-theme="dark"] .reset-btn { background: var(--bg-subtle); border-color: var(--border); color: var(--text-muted); }
+    .reset-btn:hover { border-color: var(--ocean); color: var(--ocean); background: var(--ocean-light); }
+    [data-theme="dark"] .reset-btn:hover { background: rgba(13,148,136,0.1); }
+    .reset-btn .icon svg { width: 13px; height: 13px; }
+
+    /* ==========================================
+       §3 SIGHTSEEING
+    ========================================== */
+    .filter-bar { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-8); }
+    .filter-chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 7px 18px; border-radius: var(--radius-pill);
+      border: 1px solid var(--border); background: var(--bg-card);
+      font-family: var(--font-heading); font-size: 12px; font-weight: 700;
+      color: var(--text-muted); cursor: pointer; transition: all 0.2s;
+    }
+    .filter-chip .icon svg { width: 13px; height: 13px; }
+    .filter-chip:hover { border-color: var(--ocean); color: var(--ocean); }
+    .filter-chip.active { background: var(--ocean); color: #fff; border-color: var(--ocean); }
+    .filter-chip.active .icon { color: #fff; }
+
+    .activity-grid { display: grid; gap: var(--space-5); grid-template-columns: 1fr; }
+    @media (min-width: 640px) { .activity-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1000px) { .activity-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .activity-card { padding: var(--space-5); }
+    .activity-card[data-hidden="true"] { display: none; }
+    .activity-card__top {
+      display: flex; align-items: flex-start;
+      justify-content: space-between; gap: var(--space-3); margin-bottom: var(--space-4);
+    }
+    .activity-card__icon-wrap {
+      width: 50px; height: 50px; border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center;
+      background: var(--beige); flex-shrink: 0;
+    }
+    [data-theme="dark"] .activity-card__icon-wrap {
+      background: hsl(226, 14%, 17%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.07);
+    }
+    .activity-card__icon-wrap .icon svg { width: 24px; height: 24px; stroke-width: 1.5; }
+
+    .badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 4px 10px; border-radius: var(--radius-pill);
+      font-family: var(--font-heading); font-size: 11px; font-weight: 700; white-space: nowrap;
+    }
+    .badge .icon svg { width: 11px; height: 11px; }
+    .badge--gold   { background: rgba(234,179,8,0.12); color: var(--sand); border: 1px solid rgba(234,179,8,0.28); }
+    .badge--teal   { background: var(--ocean-light); color: var(--ocean); border: 1px solid rgba(13,148,136,0.22); }
+    .badge--coral  { background: var(--coral-light); color: var(--coral); border: 1px solid rgba(239,68,68,0.22); }
+    .badge--jungle { background: var(--jungle-light); color: var(--jungle); border: 1px solid rgba(34,197,94,0.22); }
+    .badge--neutral{ background: var(--bg-subtle); color: var(--text-soft); border: 1px solid var(--border); }
+    [data-theme="dark"] .badge--teal   { background: rgba(13,148,136,0.16); }
+    [data-theme="dark"] .badge--coral  { background: rgba(239,68,68,0.13); }
+    [data-theme="dark"] .badge--jungle { background: rgba(34,197,94,0.11); }
+
+    .activity-card__name {
+      font-family: var(--font-heading); font-size: 17px; font-weight: 700;
+      color: var(--text-main); margin-bottom: var(--space-1);
+    }
+    .activity-card__loc {
+      font-size: 12px; color: var(--text-soft);
+      display: flex; align-items: center; gap: 4px; margin-bottom: var(--space-3);
+    }
+    .activity-card__loc .icon svg { width: 12px; height: 12px; }
+    .activity-card__desc { font-size: 13.5px; color: var(--text-muted); line-height: 1.65; }
+
+    /* ==========================================
+       §4 LOCAL EXPERIENCES — BENTO GRID
+    ========================================== */
+    .bento-grid { display: grid; gap: var(--space-5); grid-template-columns: 1fr; }
+    @media (min-width: 768px) {
+      .bento-grid { grid-template-columns: repeat(3, 1fr); grid-template-rows: auto auto; }
+      .bento-card--featured { grid-column: span 2; grid-row: span 2; }
+    }
+
+    .bento-card {
+      padding: var(--space-6); position: relative; overflow: hidden; min-height: 200px;
+      background: #fff;             /* white cards on beige section bg */
+      border-radius: var(--radius-lg);
+    }
+    [data-theme="dark"] .bento-card {
+      background: linear-gradient(145deg, hsl(226,16%,13%) 0%, hsl(226,14%,11%) 100%);
+    }
+    .bento-card--featured {
+      min-height: 320px;
+      background: linear-gradient(145deg, #fff 0%, var(--beige) 100%);
+    }
+    [data-theme="dark"] .bento-card--featured {
+      background: linear-gradient(145deg, hsl(226,16%,14%) 0%, hsl(38,18%,11%) 100%);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.08),
+        0 8px 40px rgba(0,0,0,0.55);
+    }
+
+    .bento-card__gem {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(234,179,8,0.10); border: 1px solid rgba(234,179,8,0.28);
+      color: var(--sand); font-family: var(--font-heading);
+      font-size: 10px; font-weight: 800; letter-spacing: 0.08em;
+      padding: 4px 10px; border-radius: var(--radius-pill);
+      text-transform: uppercase; margin-bottom: var(--space-3);
+    }
+    .bento-card__gem .icon svg { width: 12px; height: 12px; }
+    .bento-card__title {
+      font-family: var(--font-display);
+      font-size: 22px; font-weight: 700; color: var(--text-main);
+      margin-bottom: var(--space-2); line-height: 1.2;
+    }
+    .bento-card--featured .bento-card__title { font-size: 30px; }
+    .bento-card__desc { font-size: 14px; color: var(--text-muted); line-height: 1.68; }
+
+    /* ==========================================
+       §5 SHOPPING DIRECTORY
+    ========================================== */
+    .shopping-grid { display: grid; gap: var(--space-5); grid-template-columns: 1fr; }
+    @media (min-width: 640px) { .shopping-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1000px) { .shopping-grid { grid-template-columns: repeat(4, 1fr); } }
+
+    .shop-card { padding: var(--space-5); }
+    .shop-card__icon-wrap {
+      width: 46px; height: 46px; border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center;
+      background: var(--beige); margin-bottom: var(--space-4);
+    }
+    [data-theme="dark"] .shop-card__icon-wrap {
+      background: hsl(226, 14%, 17%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.07);
+    }
+    .shop-card__icon-wrap .icon svg { width: 22px; height: 22px; stroke-width: 1.5; }
+    .shop-card__name {
+      font-family: var(--font-heading); font-size: 15px; font-weight: 700;
+      color: var(--text-main); margin-bottom: var(--space-1);
+    }
+    .shop-card__loc {
+      font-size: 12px; color: var(--text-soft); margin-bottom: var(--space-3);
+      display: flex; align-items: center; gap: 4px;
+    }
+    .shop-card__loc .icon svg { width: 12px; height: 12px; }
+    .shop-card__tags { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-bottom: var(--space-3); }
+    .shop-card__tag {
+      font-size: 11px; font-weight: 600; font-family: var(--font-heading);
+      padding: 3px 9px; border-radius: var(--radius-pill);
+      background: var(--beige); color: var(--beige-text);
+      border: 1px solid var(--beige-mid);
+    }
+    [data-theme="dark"] .shop-card__tag { background: var(--bg-subtle); color: var(--text-soft); border-color: var(--border); }
+    .shop-card__vibe {
+      font-size: 12px; color: var(--text-soft); margin-top: var(--space-2);
+      font-style: italic; display: flex; align-items: center; gap: 5px;
+    }
+    .shop-card__vibe .icon svg { width: 13px; height: 13px; }
+
+    /* ==========================================
+       §6 FOOD & DINING — TABS
+    ========================================== */
+    .tabs {
+      display: flex; gap: 0; border-bottom: 1px solid var(--border);
+      margin-bottom: var(--space-8); overflow-x: auto;
+    }
+    .tab-btn {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: var(--space-3) var(--space-5); border: none; background: none;
+      font-family: var(--font-heading); font-size: 13px; font-weight: 700;
+      color: var(--text-soft); cursor: pointer;
+      border-bottom: 2px solid transparent; margin-bottom: -1px;
+      white-space: nowrap; transition: all 0.2s;
+    }
+    .tab-btn .icon svg { width: 14px; height: 14px; }
+    .tab-btn:hover { color: var(--ocean); }
+    .tab-btn.active { color: var(--ocean); border-bottom-color: var(--ocean); }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; animation: fadeIn 0.3s ease; }
+
+    .dishes-grid { display: grid; gap: var(--space-6); grid-template-columns: 1fr; }
+    @media (min-width: 640px) { .dishes-grid { grid-template-columns: 1fr 1fr; } }
+
+    .dishes-col__title {
+      font-family: var(--font-heading); font-size: 12px; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      margin-bottom: var(--space-4); display: flex; align-items: center; gap: var(--space-2);
+      padding-bottom: var(--space-2); border-bottom: 1px solid var(--beige-mid);
+    }
+    [data-theme="dark"] .dishes-col__title { border-bottom-color: var(--border); }
+    .dishes-col__title .icon svg { width: 14px; height: 14px; }
+    .dish-item { padding: var(--space-4) 0; border-bottom: 1px solid var(--border); }
+    .dish-item:last-child { border-bottom: none; }
+    .dish-item__name {
+      font-family: var(--font-heading); font-size: 15px; font-weight: 700;
+      color: var(--text-main); margin-bottom: 3px;
+    }
+    .dish-item__thai { font-style: italic; font-size: 13px; color: var(--ocean); margin-bottom: 4px; }
+    .dish-item__desc { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+
+    .resto-grid { display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
+    @media (min-width: 640px) { .resto-grid { grid-template-columns: 1fr 1fr; } }
+
+    .resto-card { padding: var(--space-5); }
+    .resto-card__name {
+      font-family: var(--font-heading); font-size: 16px; font-weight: 700;
+      color: var(--text-main); margin-bottom: var(--space-1);
+    }
+    .resto-card__loc {
+      font-size: 12px; color: var(--text-soft);
+      display: flex; align-items: center; gap: 4px; margin-bottom: var(--space-3);
+    }
+    .resto-card__loc .icon svg { width: 12px; height: 12px; }
+    .resto-card__specialty { font-size: 13.5px; color: var(--text-muted); line-height: 1.65; }
+    .resto-card__tags { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-top: var(--space-3); }
+
+    /* ==========================================
+       §7 LOGISTICS
+    ========================================== */
+    .logistics-grid { display: grid; gap: var(--space-6); grid-template-columns: 1fr; }
+    @media (min-width: 900px) { .logistics-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .logistics-card { padding: var(--space-6); }
+    .logistics-card__icon-wrap {
+      width: 50px; height: 50px; border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center;
+      background: var(--ocean-light); margin-bottom: var(--space-4);
+    }
+    [data-theme="dark"] .logistics-card__icon-wrap {
+      background: rgba(13,148,136,0.14);
+      box-shadow: 0 0 22px rgba(13,148,136,0.20), inset 0 1px 0 rgba(13,148,136,0.28);
+    }
+    .logistics-card__icon-wrap .icon svg { width: 24px; height: 24px; stroke-width: 1.5; }
+    .logistics-card__title {
+      font-family: var(--font-heading); font-size: 18px; font-weight: 700;
+      color: var(--text-main); margin-bottom: var(--space-4);
+    }
+    .logistics-list { list-style: none; display: flex; flex-direction: column; gap: var(--space-3); }
+    .logistics-item {
+      display: flex; align-items: flex-start; gap: var(--space-3);
+      font-size: 13.5px; color: var(--text-muted); line-height: 1.65;
+    }
+    .logistics-item .icon { flex-shrink: 0; margin-top: 2px; }
+    .logistics-item .icon svg { width: 15px; height: 15px; }
+
+    .app-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+    .app-item {
+      display: flex; align-items: center; gap: var(--space-2);
+      background: var(--beige); border: 1px solid var(--beige-mid);
+      border-radius: var(--radius-md); padding: var(--space-3);
+      font-size: 12.5px; font-weight: 600; color: var(--beige-text);
+    }
+    [data-theme="dark"] .app-item {
+      background: linear-gradient(135deg, hsl(226,16%,15%), hsl(226,14%,13%));
+      border: 1px solid rgba(255,255,255,0.07);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+      color: var(--text-muted);
+    }
+    .app-item .icon svg { width: 17px; height: 17px; }
+
+    /* ==========================================
+       FOOTER — Editorial Redesign
+    ========================================== */
+    .footer {
+      padding: var(--space-12) 0;
+      background: var(--beige); border-top: 1px solid var(--beige-mid);
+      text-align: center;
+    }
+    [data-theme="dark"] .footer {
+      background: linear-gradient(180deg, hsl(38,20%,9%) 0%, hsl(224,14%,7%) 100%);
+      border-top: 1px solid rgba(234,179,8,0.14);
+    }
+    .footer__brand {
+      font-family: var(--font-display); font-size: 28px; font-weight: 700;
+      color: var(--beige-text); margin-bottom: var(--space-3);
+      display: flex; align-items: center; justify-content: center; gap: var(--space-2);
+      letter-spacing: 0.05em;
+    }
+    [data-theme="dark"] .footer__brand { color: var(--text-main); }
+    .footer__brand span { color: var(--ocean); }
+    .footer__rule {
+      width: 60px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--beige-deep), transparent);
+      margin: 0 auto var(--space-4);
+    }
+    [data-theme="dark"] .footer__rule {
+      background: linear-gradient(90deg, transparent, rgba(234,179,8,0.45), transparent);
+    }
+    .footer__edition {
+      font-family: var(--font-heading); font-size: 10px; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--beige-deep); margin-bottom: var(--space-4);
+    }
+    [data-theme="dark"] .footer__edition { color: hsl(38,30%,45%); }
+    .footer__note {
+      font-size: 12.5px; color: var(--beige-text);
+      max-width: 480px; margin: 0 auto; line-height: 1.75;
+    }
+    [data-theme="dark"] .footer__note { color: var(--text-soft); }
+
+    /* ==========================================
+       SCROLL REVEAL
+    ========================================== */
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ==========================================
+       KEYFRAMES
+    ========================================== */
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%       { transform: translateX(-50%) translateY(8px); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+
+    /* ==========================================
+       SCROLLBAR
+    ========================================== */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg-page); }
+    ::-webkit-scrollbar-thumb { background: var(--beige-mid); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--ocean); }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <div class="nav__brand">
+          <span class="icon icon--teal"><i data-lucide="map"></i></span>
+          Phuket<span class="nav__brand-dot">.</span>Guide
+        </div>
+        <nav aria-label="Section navigation">
+          <ul class="nav__links">
+            <li><a href="#remember">Essentials</a></li>
+            <li><a href="#weather">Weather</a></li>
+            <li><a href="#sightseeing">Sightseeing</a></li>
+            <li><a href="#experiences">Experiences</a></li>
+            <li><a href="#shopping">Shopping</a></li>
+            <li><a href="#food">Food</a></li>
+            <li><a href="#logistics">Logistics</a></li>
+          </ul>
+        </nav>
+        <div class="nav__actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i data-lucide="sun"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== HERO — Centered Cinematic ===================== -->
+  <section class="hero" aria-label="Hero banner">
+    <div class="hero__bg" id="heroBg"></div>
+    <div class="hero__overlay"></div>
+
+    <!-- Centered content -->
+    <div class="hero__content container">
+      <p class="hero__eyebrow">· · · &nbsp; October 2025 &nbsp; · · ·</p>
+      <h1 class="hero__title">Phuket</h1>
+      <div class="hero__rule"></div>
+      <p class="hero__subtitle">Thailand</p>
+      <p class="hero__lead">Your Complete October Travel Recommendation Guide</p>
+    </div>
+
+    <!-- Scroll cue -->
+    <div class="hero__scroll" aria-hidden="true">
+      Explore
+      <i data-lucide="chevron-down"></i>
+    </div>
+
+    <!-- Full-width frosted stats bar at bottom -->
+    <div class="hero__stats-bar">
+      <div class="hero__stats-inner">
+        <div class="hero__stat">
+          <span class="icon icon--sand icon--md"><i data-lucide="thermometer"></i></span>
+          <div>
+            <span class="hero__stat-label">Temperature</span>
+            <span class="hero__stat-value">24°C – 31°C</span>
+          </div>
+        </div>
+        <div class="hero__stat">
+          <span class="icon icon--sand icon--md"><i data-lucide="droplets"></i></span>
+          <div>
+            <span class="hero__stat-label">Humidity</span>
+            <span class="hero__stat-value">~80%</span>
+          </div>
+        </div>
+        <div class="hero__stat">
+          <span class="icon icon--sand icon--md"><i data-lucide="calendar"></i></span>
+          <div>
+            <span class="hero__stat-label">Season</span>
+            <span class="hero__stat-value">October 2025</span>
+          </div>
+        </div>
+        <div class="hero__stat">
+          <span class="icon icon--sand icon--md"><i data-lucide="waves"></i></span>
+          <div>
+            <span class="hero__stat-label">Coast</span>
+            <span class="hero__stat-value">Andaman Sea</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gradient bridge -->
+  <div class="hero__bridge"></div>
+
+  <main>
+
+    <!-- ===================== §1 POINTS TO REMEMBER (Beige section) ===================== -->
+    <section class="section section--beige" id="remember" aria-labelledby="remember-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="section__eyebrow">01 &nbsp;— &nbsp;Essentials</p>
+          <h2 class="section__title" id="remember-title">Points to Remember</h2>
+          <p class="section__lead">Critical tips from a general traveller, medical expert, and local guide perspective — before you land.</p>
+        </div>
+        <div class="advice-grid">
+
+          <div class="card advice-card advice-card--teal reveal">
+            <div class="advice-card__icon-wrap">
+              <span class="icon icon--teal icon--xl"><i data-lucide="compass"></i></span>
+            </div>
+            <p class="advice-card__label">General</p>
+            <h3 class="advice-card__title">General Travel Advice</h3>
+            <ul class="advice-list">
+              <li class="advice-item"><span class="icon icon--teal icon--sm"><i data-lucide="circle-dot"></i></span>Thailand is cash-reliant — always carry Thai Baht (THB) for markets, street food &amp; tuk-tuks.</li>
+              <li class="advice-item"><span class="icon icon--teal icon--sm"><i data-lucide="circle-dot"></i></span>Temple dress code: cover shoulders &amp; knees. Carry a lightweight sarong or shawl.</li>
+              <li class="advice-item"><span class="icon icon--teal icon--sm"><i data-lucide="circle-dot"></i></span>Remove shoes before entering temples and many local shops.</li>
+              <li class="advice-item"><span class="icon icon--teal icon--sm"><i data-lucide="circle-dot"></i></span>Return the "Wai" greeting — press palms together as a polite acknowledgement.</li>
+            </ul>
+          </div>
+
+          <div class="card advice-card advice-card--amber reveal">
+            <div class="advice-card__icon-wrap">
+              <span class="icon icon--sand icon--xl"><i data-lucide="heart-pulse"></i></span>
+            </div>
+            <p class="advice-card__label">Medical &amp; Health</p>
+            <h3 class="advice-card__title">Doctor's Health Advice</h3>
+            <ul class="advice-list">
+              <li class="advice-item"><span class="icon icon--sand icon--sm"><i data-lucide="circle-dot"></i></span>Dengue fever risk in rainy season — use DEET-based repellent and wear breathable long sleeves.</li>
+              <li class="advice-item"><span class="icon icon--sand icon--sm"><i data-lucide="circle-dot"></i></span>Drink only bottled or filtered water; eat at busy, reputable eateries.</li>
+              <li class="advice-item"><span class="icon icon--sand icon--sm"><i data-lucide="circle-dot"></i></span>The tropical sun is intense even on cloudy days — apply high-SPF sunscreen generously.</li>
+              <li class="advice-item"><span class="icon icon--sand icon--sm"><i data-lucide="circle-dot"></i></span>Stay hydrated — carry electrolyte tablets to prevent heat exhaustion.</li>
+            </ul>
+          </div>
+
+          <div class="card advice-card advice-card--coral reveal">
+            <div class="advice-card__icon-wrap">
+              <span class="icon icon--coral icon--xl"><i data-lucide="shield-alert"></i></span>
+            </div>
+            <p class="advice-card__label">Precautions</p>
+            <h3 class="advice-card__title">Local Guide's Safety Tips</h3>
+            <ul class="advice-list">
+              <li class="advice-item"><span class="icon icon--coral icon--sm"><i data-lucide="circle-dot"></i></span>October seas can be treacherous — always obey beach warning flags.</li>
+              <li class="advice-item"><span class="icon icon--coral icon--sm"><i data-lucide="circle-dot"></i></span>Agree on tuk-tuk fares before boarding to avoid disputes.</li>
+              <li class="advice-item"><span class="icon icon--coral icon--sm"><i data-lucide="circle-dot"></i></span>Keep electronics in a waterproof dry bag for sudden tropical downpours.</li>
+            </ul>
+            <div class="alert-box">
+              <span class="icon icon--sm"><i data-lucide="triangle-alert"></i></span>
+              Red Flag = Absolutely NO swimming. No exceptions.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== §2 WEATHER & PACKING ===================== -->
+    <section class="section" id="weather" aria-labelledby="weather-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="section__eyebrow">02 &nbsp;— &nbsp;Climate</p>
+          <h2 class="section__title" id="weather-title">Weather &amp; Packing Guide</h2>
+          <p class="section__lead">October is a transition month — fewer crowds, lush green landscapes, and short intense rain bursts.</p>
+        </div>
+        <div class="weather-grid">
+
+          <div class="card weather-card reveal">
+            <p class="weather-card__label">Climate Overview</p>
+            <h3 class="weather-card__title">October in Phuket</h3>
+            <div class="temp-display">24°–31° <span>Celsius</span></div>
+            <div class="weather-pills">
+              <span class="weather-pill"><span class="icon icon--sand"><i data-lucide="sun"></i></span>Sunny Spells</span>
+              <span class="weather-pill"><span class="icon icon--teal"><i data-lucide="cloud-rain"></i></span>Afternoon Showers</span>
+              <span class="weather-pill"><span class="icon icon--teal"><i data-lucide="droplets"></i></span>80% Humidity</span>
+              <span class="weather-pill"><span class="icon icon--jungle"><i data-lucide="leaf"></i></span>Lush &amp; Green</span>
+            </div>
+            <p class="weather-desc">Rain comes in short, intense bursts or afternoon thunderstorms — not all-day downpours. Expect several hours of sunshine daily. One of the wetter months, but with significantly fewer crowds than peak season.</p>
+          </div>
+
+          <div class="card weather-card reveal">
+            <p class="weather-card__label">Interactive Packing List</p>
+            <h3 class="weather-card__title">What to Pack</h3>
+            <div class="checklist-group">
+              <p class="checklist-group__title"><span class="icon icon--muted"><i data-lucide="shirt"></i></span>Clothing</p>
+              <label class="checklist-item"><input type="checkbox" id="cl1" onchange="toggleCheck(this)"><label for="cl1">Lightweight linen / bamboo / moisture-wicking tops</label></label>
+              <label class="checklist-item"><input type="checkbox" id="cl2" onchange="toggleCheck(this)"><label for="cl2">Loose breathable shorts &amp; trousers (no denim)</label></label>
+              <label class="checklist-item"><input type="checkbox" id="cl3" onchange="toggleCheck(this)"><label for="cl3">Lightweight sarong / shawl (for temples)</label></label>
+            </div>
+            <div class="checklist-group">
+              <p class="checklist-group__title"><span class="icon icon--muted"><i data-lucide="umbrella"></i></span>Rain Gear</p>
+              <label class="checklist-item"><input type="checkbox" id="cl4" onchange="toggleCheck(this)"><label for="cl4">High-quality waterproof shell jacket</label></label>
+              <label class="checklist-item"><input type="checkbox" id="cl5" onchange="toggleCheck(this)"><label for="cl5">Compact windproof umbrella</label></label>
+              <label class="checklist-item"><input type="checkbox" id="cl6" onchange="toggleCheck(this)"><label for="cl6">Waterproof dry bag for electronics</label></label>
+            </div>
+            <div class="checklist-group">
+              <p class="checklist-group__title"><span class="icon icon--muted"><i data-lucide="footprints"></i></span>Footwear &amp; Accessories</p>
+              <label class="checklist-item"><input type="checkbox" id="cl7" onchange="toggleCheck(this)"><label for="cl7">Non-slip sandals (surfaces get slippery)</label></label>
+              <label class="checklist-item"><input type="checkbox" id="cl8" onchange="toggleCheck(this)"><label for="cl8">High-SPF sunscreen + after-sun lotion</label></label>
+              <label class="checklist-item"><input type="checkbox" id="cl9" onchange="toggleCheck(this)"><label for="cl9">DEET insect repellent</label></label>
+              <label class="checklist-item"><input type="checkbox" id="cl10" onchange="toggleCheck(this)"><label for="cl10">Electrolyte tablets for hydration</label></label>
+            </div>
+            <button class="reset-btn" onclick="resetChecklist()">
+              <span class="icon"><i data-lucide="rotate-ccw"></i></span>Reset List
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== §3 SIGHTSEEING ===================== -->
+    <section class="section" id="sightseeing" aria-labelledby="sightseeing-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="section__eyebrow">03 &nbsp;— &nbsp;Activities</p>
+          <h2 class="section__title" id="sightseeing-title">Sightseeing &amp; Activities</h2>
+          <p class="section__lead">Filter by category to find the perfect experiences for your October visit.</p>
+        </div>
+        <div class="filter-bar" role="group" aria-label="Activity filters">
+          <button class="filter-chip active" onclick="filterActivities('all', this)">All</button>
+          <button class="filter-chip" onclick="filterActivities('culture', this)"><span class="icon"><i data-lucide="landmark"></i></span>Culture</button>
+          <button class="filter-chip" onclick="filterActivities('nature', this)"><span class="icon"><i data-lucide="trees"></i></span>Nature</button>
+          <button class="filter-chip" onclick="filterActivities('adventure', this)"><span class="icon"><i data-lucide="waves"></i></span>Adventure</button>
+          <button class="filter-chip" onclick="filterActivities('october', this)"><span class="icon"><i data-lucide="star"></i></span>October Special</button>
+        </div>
+        <div class="activity-grid">
+
+          <div class="card activity-card reveal" data-category="culture october">
+            <div class="activity-card__top">
+              <div class="activity-card__icon-wrap"><span class="icon icon--sand"><i data-lucide="sparkles"></i></span></div>
+              <span class="badge badge--gold"><span class="icon"><i data-lucide="star"></i></span>October Special</span>
+            </div>
+            <h3 class="activity-card__name">Phuket Vegetarian Festival</h3>
+            <p class="activity-card__loc"><span class="icon icon--muted"><i data-lucide="map-pin"></i></span>Phuket Town — Jui Tui Shrine</p>
+            <p class="activity-card__desc">A unique cultural event in October featuring spectacular street processions and sacred, intense rituals. One of Phuket's most extraordinary experiences.</p>
+          </div>
+
+          <div class="card activity-card reveal" data-category="culture">
+            <div class="activity-card__top">
+              <div class="activity-card__icon-wrap"><span class="icon icon--teal"><i data-lucide="landmark"></i></span></div>
+              <span class="badge badge--teal">Culture</span>
+            </div>
+            <h3 class="activity-card__name">Old Phuket Town</h3>
+            <p class="activity-card__loc"><span class="icon icon--muted"><i data-lucide="map-pin"></i></span>Phuket Town</p>
+            <p class="activity-card__desc">Stroll historic streets admiring colorful Sino-Portuguese architecture, street art, and local cafés. Covered walkways provide excellent shelter on rainy days.</p>
+          </div>
+
+          <div class="card activity-card reveal" data-category="culture">
+            <div class="activity-card__top">
+              <div class="activity-card__icon-wrap"><span class="icon icon--teal"><i data-lucide="mountain"></i></span></div>
+              <span class="badge badge--teal">Culture</span>
+            </div>
+            <h3 class="activity-card__name">Big Buddha</h3>
+            <p class="activity-card__loc"><span class="icon icon--muted"><i data-lucide="map-pin"></i></span>Nakkerd Hills</p>
+            <p class="activity-card__desc">A massive, iconic landmark offering stunning panoramic views across the entire island. Best visited at sunrise or sunset for dramatic lighting.</p>
+          </div>
+
+          <div class="card activity-card reveal" data-category="culture">
+            <div class="activity-card__top">
+              <div class="activity-card__icon-wrap"><span class="icon icon--teal"><i data-lucide="building-2"></i></span></div>
+              <span class="badge badge--teal">Culture</span>
+            </div>
+            <h3 class="activity-card__name">Wat Chalong</h3>
+            <p class="activity-card__loc"><span class="icon icon--muted"><i data-lucide="map-pin"></i></span>Chalong</p>
+            <p class="activity-card__desc">The largest and most culturally significant Buddhist temple in Phuket. A serene and deeply spiritual experience, especially during quiet morning hours.</p>
+          </div>
+
+          <div class="card activity-card reveal" data-category="nature">
+            <div class="activity-card__top">
+              <div class="activity-card__icon-wrap"><span class="icon icon--jungle"><i data-lucide="trees"></i></span></div>
+              <span class="badge badge--jungle">Nature</span>
+            </div>
+            <h3 class="activity-card__name">Khao Phra Thaeo National Park</h3>
+            <p class="activity-card__loc"><span class="icon icon--muted"><i data-lucide="map-pin"></i></span>Thalang</p>
+            <p class="activity-card__desc">Vibrant jungle trekking and the spectacular Bang Pae Waterfall — exceptionally lush and powerful after the monsoon rains of October.</p>
+          </div>
+
+          <div class="card activity-card reveal" data-category="adventure october">
+            <div class="activity-card__top">
+              <div class="activity-card__icon-wrap"><span class="icon icon--teal"><i data-lucide="waves"></i></span></div>
+              <span class="badge badge--gold"><span class="icon"><i data-lucide="star"></i></span>October Special</span>
+            </div>
+            <h3 class="activity-card__name">Surfing</h3>
+            <p class="activity-card__loc"><span class="icon icon--muted"><i data-lucide="map-pin"></i></span>Kata &amp; Patong Beaches</p>
+            <p class="activity-card__desc">October provides some of the best wave conditions of the year for surfing on Phuket's west coast — ideal for both beginners and experienced surfers.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== §4 LOCAL EXPERIENCES (Beige section) ===================== -->
+    <section class="section section--beige" id="experiences" aria-labelledby="experiences-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="section__eyebrow">04 &nbsp;— &nbsp;Hidden Gems</p>
+          <h2 class="section__title" id="experiences-title">Local Experiences</h2>
+          <p class="section__lead">Go beyond the tourist trail — these are the experiences that will define your trip.</p>
+        </div>
+        <div class="bento-grid">
+
+          <div class="card bento-card bento-card--featured reveal">
+            <span class="icon icon--deco icon--teal"><i data-lucide="waves"></i></span>
+            <div class="bento-card__gem"><span class="icon"><i data-lucide="gem"></i></span>Hidden Gem</div>
+            <h3 class="bento-card__title">Freedom Beach</h3>
+            <p class="bento-card__desc">Tucked away and accessible primarily by boat or a challenging hike, this secluded beach offers a serene escape with powdery white sand — far from the typical tourist crowds. The journey there is half the adventure: the reward is pure, untouched paradise. Perfect for a peaceful morning swim or a picnic on the shore.</p>
+          </div>
+
+          <div class="card bento-card reveal">
+            <span class="icon icon--deco icon--teal"><i data-lucide="fish"></i></span>
+            <div class="bento-card__gem"><span class="icon"><i data-lucide="gem"></i></span>Hidden Gem</div>
+            <h3 class="bento-card__title">Ao Sane Beach</h3>
+            <p class="bento-card__desc">A rocky, hidden spot near Nai Harn — excellent for snorkeling and observing vibrant marine life just below the surface.</p>
+          </div>
+
+          <div class="card bento-card reveal">
+            <span class="icon icon--deco icon--sand"><i data-lucide="utensils"></i></span>
+            <h3 class="bento-card__title">Thai Culinary Discovery</h3>
+            <p class="bento-card__desc">Take a local cooking class with a Phuket Town Central Market tour. Learn the secrets of authentic Thai cuisine firsthand.</p>
+          </div>
+
+          <div class="card bento-card reveal" style="grid-column: span 2;">
+            <span class="icon icon--deco icon--coral"><i data-lucide="swords"></i></span>
+            <h3 class="bento-card__title">Muay Thai Match</h3>
+            <p class="bento-card__desc">Witness a professional Muay Thai bout at a local stadium — a powerful way to experience a cornerstone of Thai culture and athletic tradition. The atmosphere is electric, raw, and unforgettable.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== §5 SHOPPING ===================== -->
+    <section class="section" id="shopping" aria-labelledby="shopping-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="section__eyebrow">05 &nbsp;— &nbsp;Retail</p>
+          <h2 class="section__title" id="shopping-title">Shopping Directory</h2>
+          <p class="section__lead">From weekend flea markets to vibrant night bazaars — find the best places to shop in Phuket.</p>
+        </div>
+        <div class="shopping-grid">
+
+          <div class="card shop-card reveal">
+            <div class="shop-card__icon-wrap"><span class="icon icon--teal"><i data-lucide="shopping-bag"></i></span></div>
+            <h3 class="shop-card__name">Naka Weekend Market</h3>
+            <p class="shop-card__loc"><span class="icon icon--muted"><i data-lucide="map-pin"></i></span>Phuket Town</p>
+            <div class="shop-card__tags">
+              <span class="shop-card__tag">Elephant Pants</span>
+              <span class="shop-card__tag">Clothing</span>
+              <span class="shop-card__tag">Electronics</span>
+              <span class="shop-card__tag">Street Food</span>
+            </div>
+            <p class="shop-card__vibe"><span class="icon icon--muted"><i data-lucide="calendar-days"></i></span>Weekend only — Island's largest market</p>
+          </div>
+
+          <div class="card shop-card reveal">
+            <div class="shop-card__icon-wrap"><span class="icon icon--sand"><i data-lucide="palette"></i></span></div>
+            <h3 class="shop-card__name">Lard Yai Walking Street</h3>
+            <p class="shop-card__loc"><span class="icon icon--muted"><i data-lucide="map-pin"></i></span>Old Phuket Town</p>
+            <div class="shop-card__tags">
+              <span class="shop-card__tag">Handicrafts</span>
+              <span class="shop-card__tag">Souvenirs</span>
+              <span class="shop-card__tag">Local Art</span>
+            </div>
+            <p class="shop-card__vibe"><span class="icon icon--muted"><i data-lucide="calendar-days"></i></span>Sundays only — Historic Sino-Portuguese backdrop</p>
+          </div>
+
+          <div class="card shop-card reveal">
+            <div class="shop-card__icon-wrap"><span class="icon icon--coral"><i data-lucide="sparkles"></i></span></div>
+            <h3 class="shop-card__name">Chillva Night Market</h3>
+            <p class="shop-card__loc"><span class="icon icon--muted"><i data-lucide="map-pin"></i></span>Phuket Town</p>
+            <div class="shop-card__tags">
+              <span class="shop-card__tag">Trendy Fashion</span>
+              <span class="shop-card__tag">Crafts</span>
+              <span class="shop-card__tag">Local Snacks</span>
+            </div>
+            <p class="shop-card__vibe"><span class="icon icon--muted"><i data-lucide="moon"></i></span>Nightly — Youthful &amp; vibrant atmosphere</p>
+          </div>
+
+          <div class="card shop-card reveal">
+            <div class="shop-card__icon-wrap"><span class="icon icon--jungle"><i data-lucide="flower-2"></i></span></div>
+            <h3 class="shop-card__name">Jungceylon / Central Phuket</h3>
+            <p class="shop-card__loc"><span class="icon icon--muted"><i data-lucide="map-pin"></i></span>Patong / Phuket Town</p>
+            <div class="shop-card__tags">
+              <span class="shop-card__tag">Coconut Oil</span>
+              <span class="shop-card__tag">Herbal Compress</span>
+              <span class="shop-card__tag">Essential Oils</span>
+            </div>
+            <p class="shop-card__vibe"><span class="icon icon--muted"><i data-lucide="building"></i></span>Modern malls — Premium spa &amp; wellness products</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== §6 FOOD & DINING ===================== -->
+    <section class="section" id="food" aria-labelledby="food-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="section__eyebrow">06 &nbsp;— &nbsp;Cuisine</p>
+          <h2 class="section__title" id="food-title">Food &amp; Dining</h2>
+          <p class="section__lead">From street-side bowls of Tom Yum to refined South Indian fare — Phuket's culinary scene is extraordinary.</p>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Dining categories">
+          <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-dishes" onclick="switchTab('dishes', this)">
+            <span class="icon"><i data-lucide="utensils-crossed"></i></span>Must-Try Dishes
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-veg" onclick="switchTab('veg', this)">
+            <span class="icon"><i data-lucide="leaf"></i></span>Veg &amp; Vegan
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-indian" onclick="switchTab('indian', this)">
+            <span class="icon"><i data-lucide="flag"></i></span>Indian Restaurants
+          </button>
+        </div>
+
+        <div class="tab-panel active" id="tab-dishes" role="tabpanel">
+          <div class="dishes-grid">
+            <div>
+              <p class="dishes-col__title" style="color: var(--jungle);">
+                <span class="icon icon--jungle"><i data-lucide="leaf"></i></span>Vegetarian Dishes
+              </p>
+              <div class="dish-item">
+                <p class="dish-item__name">Som Tum</p>
+                <p class="dish-item__thai">Green Papaya Salad</p>
+                <p class="dish-item__desc">Request it without dried shrimp or fish sauce. Refreshing, tangy, and perfectly spiced.</p>
+              </div>
+              <div class="dish-item">
+                <p class="dish-item__name">Pad Thai Je</p>
+                <p class="dish-item__thai">Vegetarian Pad Thai</p>
+                <p class="dish-item__desc">The classic Thai noodle dish made entirely without meat or seafood — still deeply flavourful.</p>
+              </div>
+              <div class="dish-item">
+                <p class="dish-item__name">Tom Kha Hed</p>
+                <p class="dish-item__thai">Coconut Mushroom Soup</p>
+                <p class="dish-item__desc">A rich, creamy coconut broth with mushrooms, lemongrass and galangal. Wonderfully aromatic.</p>
+              </div>
+            </div>
+            <div>
+              <p class="dishes-col__title" style="color: var(--coral);">
+                <span class="icon icon--coral"><i data-lucide="beef"></i></span>Non-Vegetarian Dishes
+              </p>
+              <div class="dish-item">
+                <p class="dish-item__name">Tom Yum Goong</p>
+                <p class="dish-item__thai">Spicy Shrimp Soup</p>
+                <p class="dish-item__desc">Thailand's most iconic soup — a fiery, sour broth packed with plump prawns and fragrant herbs.</p>
+              </div>
+              <div class="dish-item">
+                <p class="dish-item__name">Massaman Curry</p>
+                <p class="dish-item__thai">Rich Mild Curry</p>
+                <p class="dish-item__desc">A hearty, mildly spiced curry usually made with beef or chicken — influenced by Persian &amp; Indian flavors.</p>
+              </div>
+              <div class="dish-item">
+                <p class="dish-item__name">Moo Ping</p>
+                <p class="dish-item__thai">Grilled Pork Skewers</p>
+                <p class="dish-item__desc">Marinated pork skewers grilled on charcoal — a favourite street food snack served with sticky rice.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="tab-veg" role="tabpanel">
+          <div class="resto-grid">
+            <div class="card resto-card">
+              <h3 class="resto-card__name">Ubuntu Eat</h3>
+              <p class="resto-card__loc"><span class="icon icon--muted"><i data-lucide="map-pin"></i></span>Near Old Phuket Town</p>
+              <p class="resto-card__specialty">Offers a massive menu with extensive vegan-friendly selections spanning multiple world cuisines. One of Phuket's most accommodating restaurants for plant-based diners.</p>
+              <div class="resto-card__tags">
+                <span class="badge badge--jungle"><span class="icon"><i data-lucide="leaf"></i></span>Vegan-Friendly</span>
+                <span class="badge badge--teal">Multi-cuisine</span>
+              </div>
+            </div>
+            <div class="card resto-card">
+              <h3 class="resto-card__name">Sam's Indian Restaurant</h3>
+              <p class="resto-card__loc"><span class="icon icon--muted"><i data-lucide="map-pin"></i></span>Kamala (Delivers to Patong)</p>
+              <p class="resto-card__specialty">Clearly labels vegan options on the menu. Features excellent chana masala and various vegetable curries. Delivery available to Patong area.</p>
+              <div class="resto-card__tags">
+                <span class="badge badge--jungle"><span class="icon"><i data-lucide="leaf"></i></span>Vegan-Friendly</span>
+                <span class="badge badge--teal">Indian</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="tab-indian" role="tabpanel">
+          <div class="resto-grid">
+            <div class="card resto-card">
+              <h3 class="resto-card__name">Shiv Sagar</h3>
+              <p class="resto-card__loc"><span class="icon icon--muted"><i data-lucide="map-pin"></i></span>Patong</p>
+              <p class="resto-card__specialty">Highly recommended for pure vegetarian and Jain-friendly authentic Indian food. A trusted choice for travellers with strict dietary requirements.</p>
+              <div class="resto-card__tags">
+                <span class="badge badge--jungle">Pure Veg</span>
+                <span class="badge badge--teal">Jain-Friendly</span>
+              </div>
+            </div>
+            <div class="card resto-card">
+              <h3 class="resto-card__name">Madras Cafe</h3>
+              <p class="resto-card__loc"><span class="icon icon--muted"><i data-lucide="map-pin"></i></span>Patong</p>
+              <p class="resto-card__specialty">Known for authentic South Indian cuisine including crispy dosas and fluffy idlis. A comforting taste of home for South Indian travellers.</p>
+              <div class="resto-card__tags">
+                <span class="badge badge--teal">South Indian</span>
+                <span class="badge badge--jungle">Dosas &amp; Idlis</span>
+              </div>
+            </div>
+            <div class="card resto-card">
+              <h3 class="resto-card__name">Little Prince Indian Cuisine</h3>
+              <p class="resto-card__loc"><span class="icon icon--muted"><i data-lucide="map-pin"></i></span>Patong / Cherngtalay</p>
+              <p class="resto-card__specialty">Caters to diverse dietary needs with dedicated vegetarian, vegan, and Jain options clearly indicated on the menu. Excellent for group dining with mixed dietary requirements.</p>
+              <div class="resto-card__tags">
+                <span class="badge badge--jungle"><span class="icon"><i data-lucide="leaf"></i></span>Vegan</span>
+                <span class="badge badge--teal">Jain Options</span>
+                <span class="badge badge--coral">North &amp; South Indian</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== §7 LOGISTICS ===================== -->
+    <section class="section" id="logistics" aria-labelledby="logistics-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="section__eyebrow">07 &nbsp;— &nbsp;Practical</p>
+          <h2 class="section__title" id="logistics-title">Logistics &amp; Practical Info</h2>
+          <p class="section__lead">Everything you need to stay connected, get around, and navigate Phuket like a pro.</p>
+        </div>
+        <div class="logistics-grid">
+
+          <div class="card logistics-card reveal">
+            <div class="logistics-card__icon-wrap"><span class="icon icon--teal"><i data-lucide="wifi"></i></span></div>
+            <h3 class="logistics-card__title">SIM &amp; Connectivity</h3>
+            <ul class="logistics-list">
+              <li class="logistics-item"><span class="icon icon--jungle icon--md"><i data-lucide="check-circle"></i></span><span><strong>AIS</strong> — Best overall network coverage across the island and rural areas.</span></li>
+              <li class="logistics-item"><span class="icon icon--jungle icon--md"><i data-lucide="check-circle"></i></span><span><strong>True</strong> — Excellent urban coverage; competitive tourist SIM packages.</span></li>
+              <li class="logistics-item"><span class="icon icon--sand icon--md"><i data-lucide="lightbulb"></i></span><span>Purchase a tourist SIM at the airport on arrival (bring your passport).</span></li>
+              <li class="logistics-item"><span class="icon icon--teal icon--md"><i data-lucide="zap"></i></span><span>Use an <strong>eSIM</strong> service to activate data before you even land — zero hassle.</span></li>
+            </ul>
+          </div>
+
+          <div class="card logistics-card reveal">
+            <div class="logistics-card__icon-wrap"><span class="icon icon--teal"><i data-lucide="bus"></i></span></div>
+            <h3 class="logistics-card__title">Local Transportation</h3>
+            <ul class="logistics-list">
+              <li class="logistics-item"><span class="icon icon--jungle icon--md"><i data-lucide="car"></i></span><span><strong>Grab</strong> — Widely used ride-hailing app. Safe, metered, and reliable.</span></li>
+              <li class="logistics-item"><span class="icon icon--teal icon--md"><i data-lucide="zap"></i></span><span><strong>Bolt</strong> — Often cheaper than Grab. Good coverage in tourist areas.</span></li>
+              <li class="logistics-item"><span class="icon icon--teal icon--md"><i data-lucide="bus"></i></span><span><strong>Phuket Smart Bus</strong> — Air-conditioned bus connecting the airport to all major beach towns.</span></li>
+              <li class="logistics-item"><span class="icon icon--coral icon--md"><i data-lucide="triangle-alert"></i></span><span>Always agree on a fare with tuk-tuk drivers <em>before</em> boarding.</span></li>
+            </ul>
+          </div>
+
+          <div class="card logistics-card reveal">
+            <div class="logistics-card__icon-wrap"><span class="icon icon--teal"><i data-lucide="smartphone"></i></span></div>
+            <h3 class="logistics-card__title">Essential Apps</h3>
+            <div class="app-grid">
+              <div class="app-item"><span class="icon icon--jungle"><i data-lucide="car"></i></span>Grab</div>
+              <div class="app-item"><span class="icon icon--teal"><i data-lucide="zap"></i></span>Bolt</div>
+              <div class="app-item"><span class="icon icon--teal"><i data-lucide="map"></i></span>Google Maps</div>
+              <div class="app-item"><span class="icon icon--teal"><i data-lucide="languages"></i></span>Translate</div>
+              <div class="app-item"><span class="icon icon--coral"><i data-lucide="package"></i></span>Foodpanda</div>
+              <div class="app-item"><span class="icon icon--jungle"><i data-lucide="bike"></i></span>GrabFood</div>
+            </div>
+            <p style="margin-top: var(--space-4); font-size: 13px; color: var(--text-soft);">Download all apps before departure — some require a local number or VPN to set up outside Thailand.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER — Editorial Parchment ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__brand">
+        <span class="icon icon--teal"><i data-lucide="map"></i></span>
+        Phuket<span>.</span>Guide
+      </p>
+      <div class="footer__rule"></div>
+      <p class="footer__edition">October Edition &nbsp;·&nbsp; Thailand Travel Guide</p>
+      <p class="footer__note">This travel recommendation guide is curated for October travel to Phuket, Thailand. Information is based on verified local knowledge and expert research. Always cross-check current advisories before travel.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== JAVASCRIPT ===================== -->
+  <script>
+    // Initialise Lucide icons — must be first
+    lucide.createIcons();
+
+    // ---- THEME TOGGLE ----
+    const html = document.documentElement;
+    const themeBtn = document.getElementById('themeToggle');
+
+    function renderToggleIcon(theme) {
+      themeBtn.innerHTML = theme === 'dark' ? '<i data-lucide="sun"></i>' : '<i data-lucide="moon"></i>';
+      lucide.createIcons();
+    }
+    function setTheme(theme) {
+      html.setAttribute('data-theme', theme);
+      renderToggleIcon(theme);
+      localStorage.setItem('ph-theme', theme);
+    }
+    themeBtn.addEventListener('click', () => {
+      setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+    const saved = localStorage.getItem('ph-theme');
+    if (saved) setTheme(saved);
+
+    // ---- SCROLL REVEAL ----
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const siblings = [...e.target.parentElement.querySelectorAll('.reveal:not(.visible)')];
+          const idx = siblings.indexOf(e.target);
+          e.target.style.transitionDelay = (idx * 90) + 'ms';
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.10 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // ---- PACKING CHECKLIST ----
+    function toggleCheck(cb) {
+      cb.closest('.checklist-item').classList.toggle('checked', cb.checked);
+    }
+    function resetChecklist() {
+      document.querySelectorAll('.checklist-item input[type="checkbox"]').forEach(cb => {
+        cb.checked = false;
+        cb.closest('.checklist-item').classList.remove('checked');
+      });
+    }
+
+    // ---- ACTIVITY FILTER ----
+    function filterActivities(cat, btn) {
+      document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.activity-card').forEach(card => {
+        const cats = card.getAttribute('data-category') || '';
+        card.setAttribute('data-hidden', cat !== 'all' && !cats.includes(cat) ? 'true' : 'false');
+      });
+    }
+
+    // ---- FOOD TABS ----
+    function switchTab(tabId, btn) {
+      document.querySelectorAll('.tab-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active'); btn.setAttribute('aria-selected','true');
+      document.getElementById('tab-' + tabId).classList.add('active');
+    }
+
+    // ---- HERO PARALLAX ----
+    const heroBg = document.getElementById('heroBg');
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      if (heroBg && y < window.innerHeight * 1.5) {
+        heroBg.style.transform = `translateY(${y * 0.28}px)`;
+      }
+    }, { passive: true });
+
+    // ---- ACTIVE NAV LINK ----
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav__links a');
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinks.forEach(a => a.classList.remove('active'));
+          const active = document.querySelector(`.nav__links a[href="#${e.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { threshold: 0.35 });
+    sections.forEach(s => navObserver.observe(s));
+  </script>
+</body>
+</html>
